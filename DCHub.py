@@ -28,7 +28,7 @@ class IntelConfigParser(RawConfigParser):
         RawConfigParser.__init__(self)
         self.optionxform = str
     
-    def get_config(self, fil = None):
+    def get_config(self, fil=None):
         '''Read in old configuration file, return new configuration string'''
         sections = self.sections()
         sections.sort()
@@ -80,15 +80,15 @@ class IntelConfigParser(RawConfigParser):
                 # Name-value pairs can be separated by either : or =. 
                 # Find the separator closest to the left, and split there
                 try: poseq = strippedline.index('=')
-                except ValueError: name, value = strippedline.split(':',1)
+                except ValueError: name, value = strippedline.split(':', 1)
                 else: 
                     try: poscol = strippedline.index(':')
-                    except ValueError: name, value = strippedline.split('=',1)
+                    except ValueError: name, value = strippedline.split('=', 1)
                     else:
                         if poseq < poscol:
-                            name, value = strippedline.split('=',1)
+                            name, value = strippedline.split('=', 1)
                         else:
-                            name, value = strippedline.split(':',1)
+                            name, value = strippedline.split(':', 1)
                 name = name.strip()
                 value = value.strip()
                 if name in items:
@@ -191,7 +191,7 @@ class DCHubBot(DCHubUser):
     '''
     active = True
     isDCHubBot = True
-    def __init__(self, hub, nick = 'DCHubBot'):
+    def __init__(self, hub, nick='DCHubBot'):
         DCHubUser.__init__(self)
         self.hub = hub
         self.nick = nick
@@ -276,7 +276,7 @@ class DCHub(object):
         self._copydocstring(function, new_function)
         return new_function
         
-    def _timerwrapper(self, function, loglevel, warningtime, warninglevel = logging.WARNING):
+    def _timerwrapper(self, function, loglevel, warningtime, warninglevel=logging.WARNING):
         '''Decorator for functions that logs the amount of time the function takes
         
         loglevel is the level to log the time elapsed at if it is less than 
@@ -312,13 +312,11 @@ class DCHub(object):
         # is writeable, it can block on writing to it, so you need to add a 
         # timeout or the hub may occassionally freeze for minutes at a time
         user.socket.settimeout(0.01)
-        self.log.log(self.loglevels['newconnection'],"New user connection from %s" % user.idstring)
+        self.log.log(self.loglevels['newconnection'], "New user connection from %s" % user.idstring)
         self.setuplimits(user)
         self.sockets[user.socketid] = user
-        self.giveLock(user)
         '''SSP: '''
         self.giveFBLoginURL(user)
-        self.giveHubName(user)
         
     def badcommand(self, user, command):
         '''Check the submitted command for illegal characters
@@ -378,7 +376,7 @@ class DCHub(object):
         listensock.listen(1)
         self.listensocks[listensock.fileno()] = listensock
 
-    def debugexception(self, logmessage, loglevel = logging.DEBUG):
+    def debugexception(self, logmessage, loglevel=logging.DEBUG):
         '''Log an exception if being debugged, log a debug message otherwise'''
         if self.debug:
             self.log.exception(logmessage)
@@ -445,7 +443,7 @@ class DCHub(object):
     def getusercommands(self, user):
         '''Return command string containing all commands the user has access to'''
         commands = self.usercommands.values()
-        commands.sort(lambda uc1, uc2: cmp( uc1['position'], uc2['position']))
+        commands.sort(lambda uc1, uc2: cmp(uc1['position'], uc2['position']))
         # Remove all previous user commands for the user
         message = '$UserCommand 255 7 |'
         for command in commands:
@@ -465,7 +463,7 @@ class DCHub(object):
         timeout = 1
         readsockets = self.listensocks.keys() + [user.socketid for user in users]
         writesockets = [user.socketid for user in users if user.outgoing]
-        readsockets, writesockets, errorsockets = select(readsockets, writesockets, readsockets+writesockets, timeout)
+        readsockets, writesockets, errorsockets = select(readsockets, writesockets, readsockets + writesockets, timeout)
         self.handleerrorsockets(errorsockets)
         self.handlereadsockets(readsockets)
         self.handlewritesockets(writesockets)
@@ -517,14 +515,14 @@ class DCHub(object):
             commands[0] = user.incoming.pop() + commands[0]
             # Add commands to user's incoming command queue
             user.incoming.extend(commands)
-            user.commandtimes.extend([curtime] * (len(commands) -1 ))
+            user.commandtimes.extend([curtime] * (len(commands) - 1))
   
     def handlereloaderror(self):
         '''Reset variables that allow the hub to continue operating'''
         # In case the other hub was loaded and took over the signals
         self.setupsignals()
-        self.stop=False
-        self.reloadonexit=False
+        self.stop = False
+        self.reloadonexit = False
         self.loadbots()
         self.log.exception('Error reloading hub')
         
@@ -656,9 +654,9 @@ class DCHub(object):
                 self.replacedfunctions[functionname] = getattr(self, functionname)
                 setattr(self, functionname, function)
             for functionname, function in bot.execbefore.items():
-                self.wrapfunction(functionname, function, execbefore = True)
+                self.wrapfunction(functionname, function, execbefore=True)
             for functionname, function in bot.execafter.items():
-                self.wrapfunction(functionname, function, execbefore = False)
+                self.wrapfunction(functionname, function, execbefore=False)
             if bot.visible:
                 # Make bot appear as a user to the hub
                 if bot.nick in self.nicks:
@@ -670,7 +668,7 @@ class DCHub(object):
                     opsadded = True
                     self.ops[bot.nick] = bot
                 self.log.log(self.loglevels['userlogin'], 'Bot logged in: %s' % bot.idstring)
-                self.giveHello(bot, newuser = True)
+                self.giveHello(bot, newuser=True)
                 self.giveMyINFO(bot)
         if opsadded:
             self.giveOpList()
@@ -758,14 +756,14 @@ class DCHub(object):
             if self.usercommandsparser.has_section('dchub-usercommands'):
                 for key, value in self.usercommandsparser.items('dchub-usercommands'):
                     permission, position, type, context, command = value.split(' ', 4)
-                    command = '$UserCommand %s %s %s|' % (type, context, 
+                    command = '$UserCommand %s %s %s|' % (type, context,
                       command.replace('$', '$&#36;').replace('|', '&#124;'))
                     permission = int(permission)
                     position = float(position)
                     type = int(type)
                     context = int(context)
-                    usercommands[key] = {'name':key, 'permission': permission, 
-                      'position':position, 'type':type, 'context':context, 
+                    usercommands[key] = {'name':key, 'permission': permission,
+                      'position':position, 'type':type, 'context':context,
                       'command':command}
         except:
             return self.debugexception('Error loading user commands', self.loglevels['loadfileerror'])
@@ -779,7 +777,7 @@ class DCHub(object):
         if not os.path.isfile(self.welcomefile):
             return self.log.log(self.loglevels['missingfile'], 'Welcome message file does not exist')
         try: 
-            fil = file(self.welcomefile,'r')
+            fil = file(self.welcomefile, 'r')
             try:
                 self.welcome = fil.read()
             finally:
@@ -801,9 +799,9 @@ class DCHub(object):
         self.users[user.nick] = user
         user.loggedin = True
         self.log.log(self.loglevels['userlogin'], 'User logged in: %s' % user.idstring)
-        self.giveHello(user, newuser = True)
+        self.giveHello(user, newuser=True)
         if 'NoGetINFO' in user.supports:
-            self.giveMyINFO(user, newuser = True)
+            self.giveMyINFO(user, newuser=True)
         else:
             self.giveMyINFO(user)
         if 'NoHello' not in user.supports and user.givenicklist:
@@ -821,7 +819,7 @@ class DCHub(object):
         self.give_WelcomeMessage(user)
         self.giveUserCommand(user)
         
-    def logtimes(self, functionname, loglevel, warningtime, warninglevel = logging.WARNING):
+    def logtimes(self, functionname, loglevel, warningtime, warninglevel=logging.WARNING):
         '''Log timing information for every call to function with name
         
         If this function has already been wrapped, this function will wrap the
@@ -873,11 +871,13 @@ class DCHub(object):
         Check that the command is valid, check that user has permission to use
         the command, parse the commands args, check that the args are valid
         for the command and user, execute the command.
-        '''
+        '''        
+        print command
         if not command:
             return self.got_EmptyCommand(user)
         if self.badcommand(user, command):
             return self.log.log(self.loglevels['badcommand'], 'Bad command from %s: %r' % (user.idstring, command))
+        
         function, args = self.getcommandtype(command)
         if self.badprivileges(user, function, args):
             return self.log.log(self.loglevels['badcommand'], '%s lacks privilege for command: %r' % (user.idstring, command))
@@ -926,7 +926,7 @@ class DCHub(object):
                 user.lastcommandtime = curtime
                 commandtime = curtime - user.limits['timeperiod']
                 user.commandtimes = [ct for ct in user.commandtimes if ct > commandtime]
-                if len(user.commandtimes) >  user.limits['maxcommandspertimeperiod']:
+                if len(user.commandtimes) > user.limits['maxcommandspertimeperiod']:
                     continue
                 try: 
                     while len(user.incoming) > 1 and not user.ignoremessages:
@@ -986,8 +986,8 @@ class DCHub(object):
         self.notifyspammers = False
         self.reloadonexit = False
         self.kwargs = kwargs
-        self.badchars = ''.join([chr(i) for i in range(9) + range(14,32) + [11, 12, 127]])
-        self.badsrchars = self.badchars.replace('\x05','')
+        self.badchars = ''.join([chr(i) for i in range(9) + range(14, 32) + [11, 12, 127]])
+        self.badsrchars = self.badchars.replace('\x05', '')
         # The DC protocol is only supposed to allow alphanumerics and $ as
         # search pattern characters, but since DC++ doesn't follow this, it
         # seems pointless to restrict the characters.  Here is the command if
@@ -996,7 +996,7 @@ class DCHub(object):
         self.badsearchchars = ' '
         self.validsearchdatatypes = set(range(10))
         self.badnickchars = '$<>% \x09\x0A\x0D'
-        self.supports = 'NoGetINFO NoHello UserCommand UserIP2 FBLogin'.split()
+        self.supports = 'NoGetINFO NoHello UserCommand UserIP2'.split()
         self.replacedfunctions, self.wrappedfunctions = {}, {}
         self.execbefore, self.execafter = {}, {}
         self.usercommands = {}
@@ -1015,23 +1015,23 @@ class DCHub(object):
         # Sockets includes all connections to the server
         # Nicks includes all users that have logged in with ValidateNick
         # Users includs all users that have sent MyINFO
-        self.sockets, self.users,  self.ops, self.bots = {}, {}, {}, {}
+        self.sockets, self.users, self.ops, self.bots = {}, {}, {}, {}
         self.accounts, self.nicks = {}, {}
         self.jointimes = []
-        self.loglevels = {'wrapping':10, 'datasent':1, 'datareceived':5, 
-            'newconnection': 10, 'useradderror': 10, 'userdisconnect': 10, 
-            'socketerror': 10, 'loading': 10, 'loadingdebug': 3, 
-            'loadfileerror': 40, 'missingfile': 30, 'boterror': 20, 
-            'userlogin': 10, 'hubstatus': 20, 'userremove': 10, 
+        self.loglevels = {'wrapping':10, 'datasent':1, 'datareceived':5,
+            'newconnection': 10, 'useradderror': 10, 'userdisconnect': 10,
+            'socketerror': 10, 'loading': 10, 'loadingdebug': 3,
+            'loadfileerror': 40, 'missingfile': 30, 'boterror': 20,
+            'userlogin': 10, 'hubstatus': 20, 'userremove': 10,
             'duplicatelogin': 20, 'commanderror':10, 'userloginerror':20,
-            'badcommand':5, 'execchange': 10,}
+            'badcommand':5, 'execchange': 10, }
         self.userlimits = {'maxcommandsize':25000, 'maxqueuedcommands':20,
-            'maxcommandspertimeperiod':20, 'maxdescriptionlength':50, 
-            'maxtaglength':50, 'maxnicklength':25, 'maxemaillength':50, 
-            'minsharesize':0, 'maxmessagesize':500, 'maxnewlinespermessage':5, 
-            'maxcharacterspertimeperiod':1000, 'maxmessagespertimeperiod':10, 
-            'maxnewlinespertimeperiod':10, 'maxsearchespertimeperiod':10, 
-            'maxsearchsize':500, 'maxmyinfopertimeperiod':3, 'pingtime':300, 
+            'maxcommandspertimeperiod':20, 'maxdescriptionlength':50,
+            'maxtaglength':50, 'maxnicklength':25, 'maxemaillength':50,
+            'minsharesize':0, 'maxmessagesize':500, 'maxnewlinespermessage':5,
+            'maxcharacterspertimeperiod':1000, 'maxmessagespertimeperiod':10,
+            'maxnewlinespertimeperiod':10, 'maxsearchespertimeperiod':10,
+            'maxsearchsize':500, 'maxmyinfopertimeperiod':3, 'pingtime':300,
             'timeperiod':60}
         # Hub Limits
         self.maxusers = 500
@@ -1131,12 +1131,12 @@ class DCHub(object):
                     print message, sys.exc_info()[1]
         if self.usesyslog:
             try:
-                address = (self.sysloghost,514)
+                address = (self.sysloghost, 514)
                 if self.sysloghost.count('/'):
                     if os.name != 'posix':
                         raise ValueError, 'Can only log to Unix domain socket under Unix'
                     address = self.sysloghost
-                self.defaultsysloghandler = SysLogHandler(address ,getattr(SysLogHandler,'LOG_%s' % self.syslogfacility.upper()))
+                self.defaultsysloghandler = SysLogHandler(address , getattr(SysLogHandler, 'LOG_%s' % self.syslogfacility.upper()))
                 self.defaultsysloghandler.setFormatter(self.defaultsyslogformatter)
                 self.log.addHandler(self.defaultsysloghandler)
             except:
@@ -1214,7 +1214,7 @@ class DCHub(object):
         if self.pidfile and (not os.path.exists(self.pidfile) \
           or os.path.isfile(self.pidfile)):
             try:
-                fil = file(self.pidfile,'wb')
+                fil = file(self.pidfile, 'wb')
                 try: 
                     fil.write('%s' % os.getpid())
                 finally: 
@@ -1354,7 +1354,7 @@ class DCHub(object):
     def got_ChatMessage(self, user, nick, message, *args):
         self.give_ChatMessage(user, message)
         
-    def bad_ChatMessage(self, user, args, parsedargs = None):
+    def bad_ChatMessage(self, user, args, parsedargs=None):
         if self.notifyspammers and parsedargs is not None:
             self.give_SpamNotification(user, parsedargs[1])
             
@@ -1380,14 +1380,14 @@ class DCHub(object):
     def got_PrivateMessage(self, user, sentto, sentfrom, nick, message, *args):
         self.give_PrivateMessage(user, self.users[sentto], message)
         
-    def bad_PrivateMessage(self, user, args, parsedargs = None):
+    def bad_PrivateMessage(self, user, args, parsedargs=None):
         pass
         
     ## Close command
     
     def parseClose(self, user, args):
         nick = args
-        return (nick, )
+        return (nick,)
         
     def checkClose(self, user, nick, *args):
         if nick not in self.nicks:
@@ -1396,7 +1396,7 @@ class DCHub(object):
     def gotClose(self, user, nick, *args):
         self.removeuser(self.users[nick])
         
-    def badClose(self, user, args, parsedargs = None):
+    def badClose(self, user, args, parsedargs=None):
         pass
         
     ## ConnectToMe command
@@ -1414,7 +1414,7 @@ class DCHub(object):
     def gotConnectToMe(self, user, nick, ip, port, *args):
         self.giveConnectToMe(user, self.users[nick], ip, port)
         
-    def badConnectToMe(self, user, args, parsedargs = None):
+    def badConnectToMe(self, user, args, parsedargs=None):
         pass
     
     ## GetNickList command
@@ -1433,14 +1433,14 @@ class DCHub(object):
         if self.ops:
             self.giveOpList(user)
             
-    def badGetNickList(self, user, args, parsedargs = None):
+    def badGetNickList(self, user, args, parsedargs=None):
         pass
         
     ## GetINFO command
     
     def parseGetINFO(self, user, args):
         nick = args.split(' ')[-1]
-        return (nick, )
+        return (nick,)
         
     def checkGetINFO(self, user, nick, *args):
         if nick not in self.users:
@@ -1449,14 +1449,14 @@ class DCHub(object):
     def gotGetINFO(self, user, nick, *args):
         self.giveMyINFO(self.users[nick])
         
-    def badGetINFO(self, user, args, parsedargs = None):
+    def badGetINFO(self, user, args, parsedargs=None):
         pass
         
     ## Key command
     
     def parseKey(self, user, args):
         key = args
-        return (key, )
+        return (key,)
         
     def checkKey(self, user, key, *args):
         pass
@@ -1464,14 +1464,14 @@ class DCHub(object):
     def gotKey(self, user, key, *args):
         user.key = key
         
-    def badKey(self, user, args, parsedargs = None):
+    def badKey(self, user, args, parsedargs=None):
         pass
         
     ## Kick command
     
     def parseKick(self, user, args):
         nick = args
-        return(nick, )
+        return(nick,)
         
     def checkKick(self, user, nick, *args):
         if nick not in self.nicks:
@@ -1480,7 +1480,7 @@ class DCHub(object):
     def gotKick(self, user, nick, *args):
         self.removeuser(self.nicks[nick])
         
-    def badKick(self, user, args, parsedargs = None):
+    def badKick(self, user, args, parsedargs=None):
         pass
     
     ## MyINFO command
@@ -1490,7 +1490,7 @@ class DCHub(object):
         check, nick, rest = args.split(' ', 2)
         if check != '$ALL':
             raise ValueError, 'bad format, no $ALL'
-        description, space, speed, email, sharesize, blah = rest.split('$',5)
+        description, space, speed, email, sharesize, blah = rest.split('$', 5)
         if description[-1:] == '>':
             x = description.rfind('<')
             if x != -1:
@@ -1507,7 +1507,7 @@ class DCHub(object):
         for char in description + tag + email + speed:
             if char in self.badchars:
                 raise ValueError, 'bad character'
-        if speedclass not in range(1,12):
+        if speedclass not in range(1, 12):
             raise ValueError, 'bad speedclass'
         if sharesize < user.limits['minsharesize']:
             raise ValueError, 'share size too low'
@@ -1536,7 +1536,7 @@ class DCHub(object):
         else:
             self.giveMyINFO(user)
         
-    def badMyINFO(self, user, args, parsedargs = None):
+    def badMyINFO(self, user, args, parsedargs=None):
         if not user.loggedin:
             self.removeuser(user)
         
@@ -1552,7 +1552,7 @@ class DCHub(object):
     
     def parseMyPass(self, user, args):
         password = args
-        return (password, )
+        return (password,)
         
     def checkMyPass(self, user, password, *args):
         if password != self.accounts[user.nick]['password']:
@@ -1568,14 +1568,14 @@ class DCHub(object):
         self.giveHello(user)
         user.validcommands = set('Version GetNickList MyINFO'.split())
             
-    def badMyPass(self, user, args, parsedargs = None):
+    def badMyPass(self, user, args, parsedargs=None):
         self.giveBadPass(user)
         user.ignoremessages = True
         
     ## OpForceMove command
     
     def parseOpForceMove(self, user, args):
-        nick, where, message = args.split('$',3)[1:]
+        nick, where, message = args.split('$', 3)[1:]
         nick = nick[4:]
         where = where[6:]
         message = message[4:]
@@ -1589,7 +1589,7 @@ class DCHub(object):
         victim = self.users[nick]
         self.giveForceMove(victim, user, where, message)
         
-    def badOpForceMove(self, user, args, parsedargs = None):
+    def badOpForceMove(self, user, args, parsedargs=None):
         pass
         
     ## ReloadBots command - py-dchub extension
@@ -1613,7 +1613,7 @@ class DCHub(object):
     def gotRevConnectToMe(self, user, sender, receiver, *args):
         self.giveRevConnectToMe(user, self.users[receiver])
         
-    def badRevConnectToMe(self, user, args, parsedargs = None):
+    def badRevConnectToMe(self, user, args, parsedargs=None):
         pass
 
     ## Search command
@@ -1633,9 +1633,9 @@ class DCHub(object):
             if host[4:] != user.nick:
                 raise ValueError, 'bad nick'
         else:
-            ip, port = host.split(':',1)
+            ip, port = host.split(':', 1)
             port = int(port)
-            map(int, ip.split('.',3))
+            map(int, ip.split('.', 3))
         if datatype not in self.validsearchdatatypes:
             raise ValueError, 'bad datatype'
         if self.stringoverlaps(searchpattern, self.badsearchchars):
@@ -1656,7 +1656,7 @@ class DCHub(object):
     def gotSearch(self, user, host, sizerestricted, isminimumsize, size, datatype, searchpattern, *args):
         self.giveSearch(user, host, sizerestricted, isminimumsize, size, datatype, searchpattern)
         
-    def badSearch(self, user, args, parsedargs = None):
+    def badSearch(self, user, args, parsedargs=None):
         pass
     
     ## SR command
@@ -1697,32 +1697,32 @@ class DCHub(object):
     def gotSR(self, user, nick, path, filesize, freeslots, totalslots, hubname, hubhost, requestor, *args):
         self.giveSR(self.users[requestor], user, path, filesize, freeslots, totalslots, hubname, hubhost)
         
-    def badSR(self, user, args, parsedargs = None):
+    def badSR(self, user, args, parsedargs=None):
         pass
         
     ## Supports command
     
     def parseSupports(self, user, args):
         supports = args.split()
-        return (supports, )
+        return (supports,)
         
     def checkSupports(self, user, supports, *args):
         supports = [feature for feature in supports if feature in self.supports]
-        return (supports, )
+        return (supports,)
     
     def gotSupports(self, user, supports, *args):
         user.supports = supports
         if self.supports:
             self.giveSupports(user)
             
-    def badSupports(self, user, args, parsedargs = None):
+    def badSupports(self, user, args, parsedargs=None):
         pass
         
     ## UserIP command
     
     def parseUserIP(self, user, args):
         nick = args
-        return (nick, )
+        return (nick,)
         
     def checkUserIP(self, user, nick, *args):
         if nick not in self.nicks:
@@ -1734,14 +1734,15 @@ class DCHub(object):
     def gotUserIP(self, user, nick, *args):
         self.giveUserIP(user, self.nicks[nick])
                 
-    def badUserIP(self, user, args, parsedargs = None):
+    def badUserIP(self, user, args, parsedargs=None):
         pass
     
     ## ValidateNick command
     
     def parseValidateNick(self, user, args):
         nick = args
-        return (nick, )
+        print nick
+        return (nick,)
         
     def checkValidateNick(self, user, nick, *args):
         if not nick:
@@ -1763,6 +1764,7 @@ class DCHub(object):
     def gotValidateNick(self, user, nick, *args):
         user.nick = nick
         user.idstring += nick
+        print 'nick'
         if nick in self.accounts:
             if not self.accounts[nick]['password']:
                 return self.gotMyPass(user, '')
@@ -1773,14 +1775,36 @@ class DCHub(object):
             self.giveHello(user)
             user.validcommands = set('Version GetNickList MyINFO'.split())
             
-    def badValidateNick(self, user, args, parsedargs = None):
+    def badValidateNick(self, user, args, parsedargs=None):
         self.giveValidateDenide(user)
+    
+    ##FBAuthRand command
+    ''' SSP: '''
+    def parseFBAuthRand(self, user, args):
+        randStr = args
+        return (randStr,)
+    
+    def checkFBAuthRand(self, user, randStr, *args):
+        pass
+    
+    def gotFBAuthRand(self, user, randStr, *args):
+        if randStr == '1000':
+            print True
+            user.validcommands = set('ValidateNick Key'.split())
+            self.giveLock(user)
+            self.giveHubName(user)
+        else:
+            user.validcommands = set(['FBAuthRand'])
+            self.giveFBAuthError(user)
+            
+    def badFBAuthRand(self, user, args, parsedargs=None):
+        self.giveFBAuthError(user)
         
     ## Version command
     
     def parseVersion(self, user, args):
         version = args
-        return (version, )
+        return (version,)
         
     def checkVersion(self, user, version, *args):
         pass
@@ -1788,7 +1812,7 @@ class DCHub(object):
     def gotVersion(self, user, version, *args):
         user.version = version
         
-    def badVersion(self, user, args, parsedargs = None):
+    def badVersion(self, user, args, parsedargs=None):
         pass
         
     ### Functions that send data to clients
@@ -1859,7 +1883,7 @@ class DCHub(object):
         '''Ask the user for their password'''
         user.sendmessage('$GetPass|')
     
-    def giveHello(self, user, newuser = False):
+    def giveHello(self, user, newuser=False):
         '''Give the user a hello message
         
         If newuser is True, gives the hello message to all logged in users that
@@ -1892,8 +1916,15 @@ class DCHub(object):
     def giveFBLoginURL(self, user):
         '''Give the user the Facebook Login URL'''
         user.sendmessage('$FBLogin %s|' % self.FBLoginURL)
+        user.validcommands = set(['FBAuthRand'])
         
-    def giveHubName(self, user = None):
+    def giveFBAuthError(self, user):
+        '''Give the error to the Client if Random Number authentication fails'''
+        print 'Error'
+        user.sendmessage('$FBAuthError|')
+        user.validcommands  = set(['FBLogin FBAuthRand'])
+        
+    def giveHubName(self, user=None):
         '''Give the hub name to a new connection or to all logged on users
         
         If user is None, the hub name has changed, so send it to all users
@@ -1906,7 +1937,7 @@ class DCHub(object):
         else:
             user.sendmessage(message)
             
-    def giveMyINFO(self, client, newuser = False):
+    def giveMyINFO(self, client, newuser=False):
         '''Give MyINFO for user to the hub
         
         If newuser is True, give that user the MyINFO for everyuser in the hub
@@ -1925,7 +1956,7 @@ class DCHub(object):
         '''Give the nick list to the user'''
         user.sendmessage('$NickList %s$$|' % '$$'.join(self.users.keys()))
             
-    def giveOpList(self, user = None):
+    def giveOpList(self, user=None):
         '''Give the op list to a user or the all users
         
         If user is None, the op list has changed, so give it to all users
@@ -1959,13 +1990,13 @@ class DCHub(object):
             
     def giveSR(self, searcher, resulter, path, filesize, freeslots, totalslots, hubname, hubhost):
         '''Give search response from resulter to searcher'''
-        searcher.sendmessage('$SR %s %s\x05%i %i/%i\x05%s (%s)|'% (resulter.nick, path, filesize, freeslots, totalslots, hubname, hubhost))
+        searcher.sendmessage('$SR %s %s\x05%i %i/%i\x05%s (%s)|' % (resulter.nick, path, filesize, freeslots, totalslots, hubname, hubhost))
         
     def giveSupports(self, user):
         '''Give user a list of extensions that the server supports'''
         user.sendmessage('$Supports %s|' % ' '.join(self.supports))
         
-    def giveUserCommand(self, user = None, command = None):
+    def giveUserCommand(self, user=None, command=None):
         '''Give user command(s) to user or hub
         
         If both user and command are None, determine the appropriate commands
@@ -1991,7 +2022,7 @@ class DCHub(object):
             if 'UserCommand' in user.supports:
                 user.sendmessage(command)
         
-    def giveUserIP(self, requestor = None, requestee = None):
+    def giveUserIP(self, requestor=None, requestee=None):
         '''Give IP to requestor
         
         If neither requestor nor requestee are None, give the requestor the 
@@ -2019,7 +2050,7 @@ def parseargs():
     options = {}
     opts = [opt for opt in ' '.join(sys.argv[1:]).split('--') if opt != '']
     for opt in opts:
-        try: opt, value = opt.split('=',1)
+        try: opt, value = opt.split('=', 1)
         except ValueError:
             value = '1'
         options[opt] = value.strip()
@@ -2060,7 +2091,7 @@ def reloadhub(hub):
         hub.log.log(hub.loglevels['hubstatus'], 'Reloaded module %s' % modulename)
     return getattr(module, modulename)(oldhub=hub)
             
-def run(Hub = DCHub):
+def run(Hub=DCHub):
     '''Run the direct connect hub with keyword arguments given on the command line'''
     options = parseargs()
     dchub = Hub(**options)

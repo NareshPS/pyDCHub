@@ -124,3 +124,298 @@
 2010-11-27 08:34:59,444 DEBUG: Removing User: 130.245.206.27:8956/Naresh
 2010-11-27 08:47:51,296 DEBUG: New user connection from 130.245.206.27:9075/
 2010-11-27 08:47:51,305 DEBUG: User logged in: 130.245.206.27:9075/Naresh
+2010-11-27 09:18:14,052 DEBUG: Loaded 0 accounts
+2010-11-27 09:18:14,055 DEBUG: Loaded 0 user commands
+2010-11-27 09:18:14,055 DEBUG: Loaded 0 bots
+2010-11-27 09:18:14,058 INFO: Starting main loop
+2010-11-27 09:18:22,628 DEBUG: New user connection from 130.245.206.27:9346/
+2010-11-27 09:18:22,635 DEBUG: User logged in: 130.245.206.27:9346/Naresh
+2010-11-27 09:49:27,020 DEBUG: Client disconnected: 130.245.206.27:9346/Naresh
+2010-11-27 09:49:27,020 DEBUG: Removing User: 130.245.206.27:9346/Naresh
+2010-11-27 09:49:48,806 DEBUG: New user connection from 130.245.206.27:9575/
+2010-11-27 09:49:48,819 DEBUG: User logged in: 130.245.206.27:9575/Naresh
+2010-11-27 09:51:33,928 DEBUG: Client disconnected: 130.245.206.27:9575/Naresh
+2010-11-27 09:51:33,930 DEBUG: Removing User: 130.245.206.27:9575/Naresh
+2010-11-27 09:51:49,878 DEBUG: New user connection from 130.245.206.27:9576/
+2010-11-27 09:51:49,881 DEBUG: User logged in: 130.245.206.27:9576/Naresh
+2010-11-27 11:14:20,242 DEBUG: Loaded 0 accounts
+2010-11-27 11:14:20,243 DEBUG: Loaded 0 user commands
+2010-11-27 11:14:20,244 DEBUG: Loaded 0 bots
+2010-11-27 11:14:20,256 INFO: Starting main loop
+2010-11-27 11:14:33,674 DEBUG: New user connection from 130.245.206.27:10347/
+2010-11-27 11:14:33,677 DEBUG: Error parsing args for function parseFBAuthRand, user 130.245.206.27:10347/, args '10001000'
+2010-11-27 11:14:33,677 ERROR: Error processing command from 130.245.206.27:10347/: '$FBAuthRand 10001000'
+Traceback (most recent call last):
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 936, in processcommands
+    self.processcommand(user, command)
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 890, in processcommand
+    return getattr(self, 'bad%s' % function)(user, args)
+AttributeError: 'DCHub' object has no attribute 'badFBAuthRand'
+2010-11-27 11:25:23,859 DEBUG: Loaded 0 accounts
+2010-11-27 11:25:23,861 DEBUG: Loaded 0 user commands
+2010-11-27 11:25:23,861 DEBUG: Loaded 0 bots
+2010-11-27 11:25:23,862 INFO: Starting main loop
+2010-11-27 11:25:32,667 DEBUG: New user connection from 130.245.206.27:10388/
+2010-11-27 11:25:32,677 DEBUG: Error parsing args for function parseFBAuthRand, user 130.245.206.27:10388/, args '10001000'
+2010-11-27 11:25:32,677 ERROR: Error processing command from 130.245.206.27:10388/: '$FBAuthRand 10001000'
+Traceback (most recent call last):
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 937, in processcommands
+    self.processcommand(user, command)
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 891, in processcommand
+    return getattr(self, 'bad%s' % function)(user, args)
+AttributeError: 'DCHub' object has no attribute 'badFBAuthRand'
+2010-11-27 11:28:25,301 DEBUG: Loaded 0 accounts
+2010-11-27 11:28:25,302 DEBUG: Loaded 0 user commands
+2010-11-27 11:28:25,302 DEBUG: Loaded 0 bots
+2010-11-27 11:28:25,303 INFO: Starting main loop
+2010-11-27 11:28:32,677 DEBUG: New user connection from 130.245.206.27:10395/
+2010-11-27 11:28:32,680 DEBUG: Error parsing args for function parseFBAuthRand, user 130.245.206.27:10395/, args '10001000'
+2010-11-27 11:28:32,680 ERROR: Error processing command from 130.245.206.27:10395/: '$FBAuthRand 10001000'
+Traceback (most recent call last):
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 939, in processcommands
+    self.processcommand(user, command)
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 893, in processcommand
+    return getattr(self, 'bad%s' % function)(user, args)
+AttributeError: 'DCHub' object has no attribute 'badFBAuthRand'
+2010-11-27 11:29:39,082 DEBUG: Loaded 0 accounts
+2010-11-27 11:29:39,082 DEBUG: Loaded 0 user commands
+2010-11-27 11:29:39,082 DEBUG: Loaded 0 bots
+2010-11-27 11:29:39,085 INFO: Starting main loop
+2010-11-27 11:29:43,604 DEBUG: New user connection from 130.245.206.27:10407/
+2010-11-27 11:29:43,621 DEBUG: Error parsing args for function parseFBAuthRand, user 130.245.206.27:10407/, args '10001000'
+2010-11-27 11:29:43,621 ERROR: Error processing command from 130.245.206.27:10407/: '$FBAuthRand 10001000'
+Traceback (most recent call last):
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 939, in processcommands
+    self.processcommand(user, command)
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 893, in processcommand
+    return getattr(self, 'bad%s' % function)(user, args)
+AttributeError: 'DCHub' object has no attribute 'badFBAuthRand'
+2010-11-27 11:31:25,101 DEBUG: Loaded 0 accounts
+2010-11-27 11:31:25,101 DEBUG: Loaded 0 user commands
+2010-11-27 11:31:25,102 DEBUG: Loaded 0 bots
+2010-11-27 11:31:25,104 INFO: Starting main loop
+2010-11-27 11:31:30,160 DEBUG: New user connection from 130.245.206.27:10416/
+2010-11-27 11:31:30,161 DEBUG: Error parsing args for function parseFBAuthRand, user 130.245.206.27:10416/, args '10001000'
+2010-11-27 11:31:30,161 ERROR: Error processing command from 130.245.206.27:10416/: '$FBAuthRand 10001000'
+Traceback (most recent call last):
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 936, in processcommands
+    self.processcommand(user, command)
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 890, in processcommand
+    return getattr(self, 'bad%s' % function)(user, args)
+AttributeError: 'DCHub' object has no attribute 'badFBAuthRand'
+2010-11-27 11:33:50,970 DEBUG: Client disconnected: 130.245.206.27:10416/
+2010-11-27 11:33:50,970 DEBUG: Removing User: 130.245.206.27:10416/
+2010-11-27 11:35:00,292 DEBUG: Loaded 0 accounts
+2010-11-27 11:35:00,295 DEBUG: Loaded 0 user commands
+2010-11-27 11:35:00,295 DEBUG: Loaded 0 bots
+2010-11-27 11:35:00,296 INFO: Starting main loop
+2010-11-27 11:35:07,219 DEBUG: New user connection from 130.245.206.27:10438/
+2010-11-27 11:48:01,042 DEBUG: Loaded 0 accounts
+2010-11-27 11:48:01,042 DEBUG: Loaded 0 user commands
+2010-11-27 11:48:01,042 DEBUG: Loaded 0 bots
+2010-11-27 11:48:01,045 INFO: Starting main loop
+2010-11-27 11:48:09,131 DEBUG: Client disconnected: 130.245.206.27:10438/
+2010-11-27 11:48:09,131 DEBUG: Removing User: 130.245.206.27:10438/
+2010-11-27 11:48:09,937 DEBUG: New user connection from 130.245.206.27:10490/
+2010-11-27 11:48:45,821 DEBUG: Loaded 0 accounts
+2010-11-27 11:48:45,822 DEBUG: Loaded 0 user commands
+2010-11-27 11:48:45,822 DEBUG: Loaded 0 bots
+2010-11-27 11:48:45,823 INFO: Starting main loop
+2010-11-27 11:48:49,586 DEBUG: New user connection from 130.245.206.27:10495/
+2010-11-27 11:50:28,740 DEBUG: Loaded 0 accounts
+2010-11-27 11:50:28,742 DEBUG: Loaded 0 user commands
+2010-11-27 11:50:28,743 DEBUG: Loaded 0 bots
+2010-11-27 11:50:28,743 INFO: Starting main loop
+2010-11-27 11:50:34,312 DEBUG: New user connection from 130.245.206.27:10503/
+2010-11-27 11:54:26,368 DEBUG: Loaded 0 accounts
+2010-11-27 11:54:26,368 DEBUG: Loaded 0 user commands
+2010-11-27 11:54:26,369 DEBUG: Loaded 0 bots
+2010-11-27 11:54:26,371 INFO: Starting main loop
+2010-11-27 11:54:30,989 DEBUG: New user connection from 130.245.206.27:10548/
+2010-11-27 11:55:39,884 DEBUG: Loaded 0 accounts
+2010-11-27 11:55:39,884 DEBUG: Loaded 0 user commands
+2010-11-27 11:55:39,884 DEBUG: Loaded 0 bots
+2010-11-27 11:55:39,885 INFO: Starting main loop
+2010-11-27 11:55:44,328 DEBUG: New user connection from 130.245.206.27:10559/
+2010-11-27 11:58:53,433 DEBUG: Loaded 0 accounts
+2010-11-27 11:58:53,434 DEBUG: Loaded 0 user commands
+2010-11-27 11:58:53,434 DEBUG: Loaded 0 bots
+2010-11-27 11:58:53,437 INFO: Starting main loop
+2010-11-27 11:59:01,834 DEBUG: New user connection from 130.245.206.27:10569/
+2010-11-27 11:59:35,726 DEBUG: Loaded 0 accounts
+2010-11-27 11:59:35,727 DEBUG: Loaded 0 user commands
+2010-11-27 11:59:35,727 DEBUG: Loaded 0 bots
+2010-11-27 11:59:35,730 INFO: Starting main loop
+2010-11-27 11:59:40,579 DEBUG: New user connection from 130.245.206.27:10575/
+2010-11-27 12:05:45,259 DEBUG: Loaded 0 accounts
+2010-11-27 12:05:45,260 DEBUG: Loaded 0 user commands
+2010-11-27 12:05:45,260 DEBUG: Loaded 0 bots
+2010-11-27 12:05:45,262 INFO: Starting main loop
+2010-11-27 12:05:51,788 DEBUG: Client disconnected: 130.245.206.27:10575/
+2010-11-27 12:05:51,788 DEBUG: Removing User: 130.245.206.27:10575/
+2010-11-27 12:05:52,642 DEBUG: New user connection from 130.245.206.27:10664/
+2010-11-27 12:08:19,444 DEBUG: Loaded 0 accounts
+2010-11-27 12:08:19,444 DEBUG: Loaded 0 user commands
+2010-11-27 12:08:19,444 DEBUG: Loaded 0 bots
+2010-11-27 12:08:19,446 INFO: Starting main loop
+2010-11-27 12:08:25,683 DEBUG: New user connection from 130.245.206.27:10691/
+2010-11-27 12:12:13,165 DEBUG: Loaded 0 accounts
+2010-11-27 12:12:13,171 DEBUG: Loaded 0 user commands
+2010-11-27 12:12:13,173 DEBUG: Loaded 0 bots
+2010-11-27 12:12:13,174 INFO: Starting main loop
+2010-11-27 12:12:17,500 DEBUG: New user connection from 130.245.206.27:10714/
+2010-11-27 12:13:50,144 DEBUG: Loaded 0 accounts
+2010-11-27 12:13:50,145 DEBUG: Loaded 0 user commands
+2010-11-27 12:13:50,145 DEBUG: Loaded 0 bots
+2010-11-27 12:13:50,147 INFO: Starting main loop
+2010-11-27 12:13:55,213 DEBUG: New user connection from 130.245.206.27:10719/
+2010-11-27 12:14:32,694 DEBUG: Loaded 0 accounts
+2010-11-27 12:14:32,694 DEBUG: Loaded 0 user commands
+2010-11-27 12:14:32,694 DEBUG: Loaded 0 bots
+2010-11-27 12:14:32,697 INFO: Starting main loop
+2010-11-27 12:14:38,118 DEBUG: New user connection from 130.245.206.27:10725/
+2010-11-27 12:16:12,029 DEBUG: Loaded 0 accounts
+2010-11-27 12:16:12,030 DEBUG: Loaded 0 user commands
+2010-11-27 12:16:12,030 DEBUG: Loaded 0 bots
+2010-11-27 12:16:12,032 INFO: Starting main loop
+2010-11-27 12:16:16,459 DEBUG: New user connection from 130.245.206.27:10730/
+2010-11-27 12:18:24,346 DEBUG: Loaded 0 accounts
+2010-11-27 12:18:24,348 DEBUG: Loaded 0 user commands
+2010-11-27 12:18:24,348 DEBUG: Loaded 0 bots
+2010-11-27 12:18:24,348 INFO: Starting main loop
+2010-11-27 12:18:27,851 DEBUG: New user connection from 130.245.206.27:10742/
+2010-11-27 12:19:42,282 DEBUG: Client disconnected: 130.245.206.27:10742/
+2010-11-27 12:19:42,282 DEBUG: Removing User: 130.245.206.27:10742/
+2010-11-27 12:23:20,292 DEBUG: Loaded 0 accounts
+2010-11-27 12:23:20,293 DEBUG: Loaded 0 user commands
+2010-11-27 12:23:20,295 DEBUG: Loaded 0 bots
+2010-11-27 12:23:20,296 INFO: Starting main loop
+2010-11-27 12:23:23,134 DEBUG: New user connection from 130.245.206.27:10777/
+2010-11-27 12:28:25,385 DEBUG: Loaded 0 accounts
+2010-11-27 12:28:25,387 DEBUG: Loaded 0 user commands
+2010-11-27 12:28:25,387 DEBUG: Loaded 0 bots
+2010-11-27 12:28:25,388 INFO: Starting main loop
+2010-11-27 12:28:38,494 DEBUG: Client disconnected: 130.245.206.27:10777/
+2010-11-27 12:28:38,494 DEBUG: Removing User: 130.245.206.27:10777/
+2010-11-27 12:28:39,375 DEBUG: New user connection from 130.245.206.27:10788/
+2010-11-27 12:29:05,552 DEBUG: Client disconnected: 130.245.206.27:10788/
+2010-11-27 12:29:05,552 DEBUG: Removing User: 130.245.206.27:10788/
+2010-11-27 12:29:06,684 DEBUG: Removing User: 130.245.206.27:10789/
+2010-11-27 12:29:06,684 DEBUG: Error adding user
+2010-11-27 12:29:18,631 DEBUG: Loaded 0 accounts
+2010-11-27 12:29:18,632 DEBUG: Loaded 0 user commands
+2010-11-27 12:29:18,632 DEBUG: Loaded 0 bots
+2010-11-27 12:29:18,634 INFO: Starting main loop
+2010-11-27 12:29:22,773 DEBUG: New user connection from 130.245.206.27:10794/
+2010-11-27 12:29:22,786 DEBUG: User logged in: 130.245.206.27:10794/Naresh
+2010-11-27 13:00:26,519 DEBUG: Loaded 0 accounts
+2010-11-27 13:00:26,519 DEBUG: Loaded 0 user commands
+2010-11-27 13:00:26,519 DEBUG: Loaded 0 bots
+2010-11-27 13:00:26,522 INFO: Starting main loop
+2010-11-27 13:00:36,321 DEBUG: New user connection from 130.245.206.27:10863/
+2010-11-27 13:00:36,335 DEBUG: User logged in: 130.245.206.27:10863/Naresh
+2010-11-27 13:01:16,565 DEBUG: Client disconnected: 130.245.206.27:10863/Naresh
+2010-11-27 13:01:16,566 DEBUG: Removing User: 130.245.206.27:10863/Naresh
+2010-11-27 13:01:18,040 DEBUG: Removing User: 130.245.206.27:10865/
+2010-11-27 13:01:18,042 DEBUG: Error adding user
+2010-11-27 13:01:21,823 DEBUG: Removing User: 130.245.206.27:10866/
+2010-11-27 13:01:21,823 DEBUG: Error adding user
+2010-11-27 13:01:25,875 DEBUG: Removing User: 130.245.206.27:10867/
+2010-11-27 13:01:25,875 DEBUG: Error adding user
+2010-11-27 13:01:35,095 DEBUG: Loaded 0 accounts
+2010-11-27 13:01:35,095 DEBUG: Loaded 0 user commands
+2010-11-27 13:01:35,095 DEBUG: Loaded 0 bots
+2010-11-27 13:01:35,096 INFO: Starting main loop
+2010-11-27 13:01:39,427 DEBUG: New user connection from 130.245.206.27:10870/
+2010-11-27 13:01:39,437 DEBUG: User logged in: 130.245.206.27:10870/Naresh
+2010-11-27 13:01:43,470 DEBUG: Client disconnected: 130.245.206.27:10870/Naresh
+2010-11-27 13:01:43,470 DEBUG: Removing User: 130.245.206.27:10870/Naresh
+2010-11-27 13:01:44,657 DEBUG: Removing User: 130.245.206.27:10871/
+2010-11-27 13:01:44,657 DEBUG: Error adding user
+2010-11-27 13:02:19,209 DEBUG: Removing User: 130.245.206.27:10873/
+2010-11-27 13:02:19,209 DEBUG: Error adding user
+2010-11-27 13:02:22,421 DEBUG: Removing User: 130.245.206.27:10874/
+2010-11-27 13:02:22,421 DEBUG: Error adding user
+2010-11-27 13:02:39,470 DEBUG: New user connection from 130.245.206.27:10875/
+2010-11-27 13:02:39,480 DEBUG: User logged in: 130.245.206.27:10875/Naresh
+2010-11-27 13:02:50,295 DEBUG: Client disconnected: 130.245.206.27:10875/Naresh
+2010-11-27 13:02:50,295 DEBUG: Removing User: 130.245.206.27:10875/Naresh
+2010-11-27 13:03:12,165 DEBUG: Removing User: 130.245.206.27:10876/
+2010-11-27 13:03:12,165 DEBUG: Error adding user
+2010-11-27 13:03:26,118 DEBUG: Removing User: 130.245.206.27:10877/
+2010-11-27 13:03:26,118 DEBUG: Error adding user
+2010-11-27 13:03:45,911 DEBUG: New user connection from 130.245.206.27:10878/
+2010-11-27 13:03:45,917 DEBUG: User logged in: 130.245.206.27:10878/Naresh
+2010-11-27 13:09:51,351 DEBUG: Client disconnected: 130.245.206.27:10878/Naresh
+2010-11-27 13:09:51,351 DEBUG: Removing User: 130.245.206.27:10878/Naresh
+2010-11-27 13:09:52,476 DEBUG: New user connection from 130.245.206.27:10907/
+2010-11-27 13:09:52,496 DEBUG: User logged in: 130.245.206.27:10907/Naresh
+2010-11-27 13:09:54,763 DEBUG: Client disconnected: 130.245.206.27:10907/Naresh
+2010-11-27 13:09:54,763 DEBUG: Removing User: 130.245.206.27:10907/Naresh
+2010-11-27 13:10:01,720 DEBUG: Loaded 0 accounts
+2010-11-27 13:10:01,723 DEBUG: Loaded 0 user commands
+2010-11-27 13:10:01,723 DEBUG: Loaded 0 bots
+2010-11-27 13:10:01,723 INFO: Starting main loop
+2010-11-27 13:10:05,022 DEBUG: New user connection from 130.245.206.27:10908/
+2010-11-27 13:11:54,871 DEBUG: Client disconnected: 130.245.206.27:10908/
+2010-11-27 13:11:54,871 DEBUG: Removing User: 130.245.206.27:10908/
+2010-11-27 13:12:13,608 DEBUG: New user connection from 130.245.206.27:10936/
+2010-11-27 13:13:39,084 DEBUG: Client disconnected: 130.245.206.27:10936/
+2010-11-27 13:13:39,084 DEBUG: Removing User: 130.245.206.27:10936/
+2010-11-27 13:13:59,584 DEBUG: New user connection from 130.245.206.27:10939/
+2010-11-27 13:14:37,053 DEBUG: Client disconnected: 130.245.206.27:10939/
+2010-11-27 13:14:37,053 DEBUG: Removing User: 130.245.206.27:10939/
+2010-11-27 13:15:09,815 DEBUG: New user connection from 130.245.206.27:10945/
+2010-11-27 13:15:22,135 DEBUG: Client disconnected: 130.245.206.27:10945/
+2010-11-27 13:15:22,137 DEBUG: Removing User: 130.245.206.27:10945/
+2010-11-27 13:15:23,075 DEBUG: Removing User: 130.245.206.27:10946/
+2010-11-27 13:15:23,076 DEBUG: Error adding user
+2010-11-27 13:15:29,894 DEBUG: Removing User: 130.245.206.27:10947/
+2010-11-27 13:15:29,894 DEBUG: Error adding user
+2010-11-27 13:16:00,907 DEBUG: Removing User: 130.245.206.27:10948/
+2010-11-27 13:16:00,907 DEBUG: Error adding user
+2010-11-27 13:16:31,236 DEBUG: New user connection from 130.245.206.27:10952/
+2010-11-27 13:18:30,059 DEBUG: Loaded 0 accounts
+2010-11-27 13:18:30,061 DEBUG: Loaded 0 user commands
+2010-11-27 13:18:30,062 DEBUG: Loaded 0 bots
+2010-11-27 13:18:30,062 INFO: Starting main loop
+2010-11-27 13:18:36,710 DEBUG: New user connection from 130.245.206.27:10960/
+2010-11-27 13:20:27,253 DEBUG: Loaded 0 accounts
+2010-11-27 13:20:27,255 DEBUG: Loaded 0 user commands
+2010-11-27 13:20:27,255 DEBUG: Loaded 0 bots
+2010-11-27 13:20:27,256 INFO: Starting main loop
+2010-11-27 13:20:34,884 DEBUG: New user connection from 130.245.206.27:10968/
+2010-11-27 13:25:10,385 DEBUG: Loaded 0 accounts
+2010-11-27 13:25:10,387 DEBUG: Loaded 0 user commands
+2010-11-27 13:25:10,388 DEBUG: Loaded 0 bots
+2010-11-27 13:25:10,388 INFO: Starting main loop
+2010-11-27 13:25:16,586 DEBUG: New user connection from 130.245.206.27:10983/
+2010-11-27 13:25:16,588 ERROR: Error processing command from 130.245.206.27:10983/: '$FBAuthRand 1000'
+Traceback (most recent call last):
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 934, in processcommands
+    self.processcommand(user, command)
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 900, in processcommand
+    getattr(self, 'got%s' % function)(user, *checkedargs)
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 1797, in gotFBAuthRand
+    user.validcommands = set(['FBAuthRand'.split()])
+  File "C:\Python27\lib\sets.py", line 414, in __init__
+    self._update(iterable)
+  File "C:\Python27\lib\sets.py", line 359, in _update
+    data[element] = value
+TypeError: unhashable type: 'list'
+2010-11-27 13:25:51,562 DEBUG: Loaded 0 accounts
+2010-11-27 13:25:51,562 DEBUG: Loaded 0 user commands
+2010-11-27 13:25:51,562 DEBUG: Loaded 0 bots
+2010-11-27 13:25:51,565 INFO: Starting main loop
+2010-11-27 13:25:55,601 DEBUG: New user connection from 130.245.206.27:10987/
+2010-11-27 13:26:48,197 DEBUG: Loaded 0 accounts
+2010-11-27 13:26:48,200 DEBUG: Loaded 0 user commands
+2010-11-27 13:26:48,200 DEBUG: Loaded 0 bots
+2010-11-27 13:26:48,201 INFO: Starting main loop
+2010-11-27 13:26:54,677 DEBUG: New user connection from 130.245.206.27:10996/
+2010-11-27 13:27:17,736 DEBUG: Loaded 0 accounts
+2010-11-27 13:27:17,736 DEBUG: Loaded 0 user commands
+2010-11-27 13:27:17,736 DEBUG: Loaded 0 bots
+2010-11-27 13:27:17,739 INFO: Starting main loop
+2010-11-27 13:27:21,566 DEBUG: New user connection from 130.245.206.27:11000/
+2010-11-27 13:27:21,573 DEBUG: User logged in: 130.245.206.27:11000/Naresh
