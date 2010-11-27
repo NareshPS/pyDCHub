@@ -1,0 +1,126 @@
+2010-11-22 15:20:12,970 DEBUG: Loaded 0 accounts
+2010-11-22 15:20:12,973 DEBUG: Loaded 0 user commands
+2010-11-22 15:20:12,973 DEBUG: Loaded 0 bots
+2010-11-22 15:20:12,974 INFO: Starting main loop
+2010-11-22 15:42:20,109 INFO: Stopping due to signal 2
+2010-11-22 15:42:20,111 INFO: Shutting down logging system
+2010-11-24 05:01:50,589 DEBUG: Loaded 0 accounts
+2010-11-24 05:01:50,605 DEBUG: Loaded 0 user commands
+2010-11-24 05:01:50,607 DEBUG: Loaded 0 bots
+2010-11-24 05:01:50,608 INFO: Starting main loop
+2010-11-24 05:02:18,191 DEBUG: New user connection from 130.245.206.27:16326/
+2010-11-24 05:02:18,197 DEBUG: User logged in: 130.245.206.27:16326/Naresh
+2010-11-24 05:06:12,977 DEBUG: New user connection from 130.245.206.27:16331/
+2010-11-24 05:06:12,986 DEBUG: User logged in: 130.245.206.27:16331/Nehal
+2010-11-24 05:08:10,798 DEBUG: Client disconnected: 130.245.206.27:16331/Nehal
+2010-11-24 05:08:10,799 DEBUG: Removing User: 130.245.206.27:16331/Nehal
+2010-11-24 05:08:15,095 DEBUG: Client disconnected: 130.245.206.27:16326/Naresh
+2010-11-24 05:08:15,095 DEBUG: Removing User: 130.245.206.27:16326/Naresh
+2010-11-24 05:10:54,107 INFO: Stopping due to signal 2
+2010-11-24 05:10:54,108 INFO: Shutting down logging system
+2010-11-24 05:18:57,700 DEBUG: Loaded 0 accounts
+2010-11-24 05:18:57,746 DEBUG: Loaded 0 user commands
+2010-11-24 05:18:57,747 DEBUG: Loaded 0 bots
+2010-11-24 05:18:57,750 INFO: Starting main loop
+2010-11-27 05:11:00,075 DEBUG: Loaded 0 accounts
+2010-11-27 05:11:00,088 DEBUG: Loaded 0 user commands
+2010-11-27 05:11:00,088 DEBUG: Loaded 0 bots
+2010-11-27 05:11:00,089 INFO: Starting main loop
+2010-11-27 05:11:07,095 DEBUG: Loaded 0 accounts
+2010-11-27 05:11:07,095 DEBUG: Loaded 0 user commands
+2010-11-27 05:11:07,095 DEBUG: Loaded 0 bots
+2010-11-27 05:11:07,096 INFO: Starting main loop
+2010-11-27 05:11:20,882 DEBUG: Loaded 0 accounts
+2010-11-27 05:11:20,882 DEBUG: Loaded 0 user commands
+2010-11-27 05:11:20,884 DEBUG: Loaded 0 bots
+2010-11-27 05:11:20,884 INFO: Starting main loop
+2010-11-27 05:11:30,642 DEBUG: New user connection from 130.245.206.27:7173/
+2010-11-27 05:11:30,642 DEBUG: Error adding user
+2010-11-27 05:11:30,663 DEBUG: User logged in: 130.245.206.27:7173/Naresh
+2010-11-27 05:12:41,622 DEBUG: Client disconnected: 130.245.206.27:7173/Naresh
+2010-11-27 05:12:41,622 DEBUG: Removing User: 130.245.206.27:7173/Naresh
+2010-11-27 05:18:31,382 DEBUG: New user connection from 130.245.206.27:7225/
+2010-11-27 05:18:31,382 DEBUG: Error adding user
+2010-11-27 05:18:31,385 DEBUG: User logged in: 130.245.206.27:7225/Naresh
+2010-11-27 05:18:57,088 DEBUG: Client disconnected: 130.245.206.27:7225/Naresh
+2010-11-27 05:18:57,089 DEBUG: Removing User: 130.245.206.27:7225/Naresh
+2010-11-27 05:35:44,628 DEBUG: New user connection from 130.245.206.27:7354/
+2010-11-27 05:35:44,628 DEBUG: Error adding user
+2010-11-27 05:35:44,651 DEBUG: User logged in: 130.245.206.27:7354/Naresh
+2010-11-27 05:41:13,528 DEBUG: Loaded 0 accounts
+2010-11-27 05:41:13,529 DEBUG: Loaded 0 user commands
+2010-11-27 05:41:13,529 DEBUG: Loaded 0 bots
+2010-11-27 05:41:13,532 INFO: Starting main loop
+2010-11-27 05:52:37,459 DEBUG: Loaded 0 accounts
+2010-11-27 05:52:37,460 DEBUG: Loaded 0 user commands
+2010-11-27 05:52:37,460 DEBUG: Loaded 0 bots
+2010-11-27 05:52:37,463 INFO: Starting main loop
+2010-11-27 05:52:43,365 DEBUG: New user connection from 130.245.206.27:7508/
+2010-11-27 05:52:43,365 DEBUG: Error adding user
+2010-11-27 05:52:43,380 DEBUG: User logged in: 130.245.206.27:7508/Naresh
+2010-11-27 05:56:24,891 DEBUG: Loaded 0 accounts
+2010-11-27 05:56:24,892 DEBUG: Loaded 0 user commands
+2010-11-27 05:56:24,892 DEBUG: Loaded 0 bots
+2010-11-27 05:56:24,894 INFO: Starting main loop
+2010-11-27 05:56:36,065 DEBUG: New user connection from 130.245.206.27:7523/
+2010-11-27 05:56:36,066 DEBUG: Error adding user
+2010-11-27 05:56:36,069 DEBUG: User logged in: 130.245.206.27:7523/Naresh
+2010-11-27 05:57:33,594 DEBUG: Loaded 0 accounts
+2010-11-27 05:57:33,595 DEBUG: Loaded 0 user commands
+2010-11-27 05:57:33,595 DEBUG: Loaded 0 bots
+2010-11-27 05:57:33,598 INFO: Starting main loop
+2010-11-27 05:57:38,960 DEBUG: New user connection from 130.245.206.27:7526/
+2010-11-27 05:58:24,723 DEBUG: Client disconnected: 130.245.206.27:7526/
+2010-11-27 05:58:24,724 DEBUG: Removing User: 130.245.206.27:7526/
+2010-11-27 05:58:26,020 DEBUG: Removing User: 130.245.206.27:7527/
+2010-11-27 05:58:26,020 DEBUG: Error adding user
+2010-11-27 07:00:50,246 DEBUG: New user connection from 130.245.206.27:8080/
+2010-11-27 07:00:50,256 DEBUG: User logged in: 130.245.206.27:8080/Naresh
+2010-11-27 08:20:29,167 DEBUG: Loaded 0 accounts
+2010-11-27 08:20:29,168 DEBUG: Loaded 0 user commands
+2010-11-27 08:20:29,168 DEBUG: Loaded 0 bots
+2010-11-27 08:20:29,170 INFO: Starting main loop
+2010-11-27 08:20:35,130 DEBUG: New user connection from 130.245.206.27:8874/
+2010-11-27 08:20:35,131 DEBUG: Error adding user
+2010-11-27 08:20:35,135 DEBUG: User logged in: 130.245.206.27:8874/Naresh
+2010-11-27 08:23:15,134 DEBUG: Loaded 0 accounts
+2010-11-27 08:23:15,137 DEBUG: Loaded 0 user commands
+2010-11-27 08:23:15,138 DEBUG: Loaded 0 bots
+2010-11-27 08:23:15,140 INFO: Starting main loop
+2010-11-27 08:24:12,586 DEBUG: Loaded 0 accounts
+2010-11-27 08:24:12,586 DEBUG: Loaded 0 user commands
+2010-11-27 08:24:12,588 DEBUG: Loaded 0 bots
+2010-11-27 08:24:12,588 INFO: Starting main loop
+2010-11-27 08:24:26,296 DEBUG: New user connection from 130.245.206.27:8892/
+2010-11-27 08:24:26,296 DEBUG: Error adding user
+2010-11-27 08:24:26,305 DEBUG: User logged in: 130.245.206.27:8892/Naresh
+2010-11-27 08:28:35,526 DEBUG: Loaded 0 accounts
+2010-11-27 08:28:35,526 DEBUG: Loaded 0 user commands
+2010-11-27 08:28:35,528 DEBUG: Loaded 0 bots
+2010-11-27 08:28:35,529 INFO: Starting main loop
+2010-11-27 08:28:42,792 DEBUG: New user connection from 130.245.206.27:8918/
+2010-11-27 08:28:42,792 DEBUG: Error adding user
+2010-11-27 08:28:42,796 DEBUG: User logged in: 130.245.206.27:8918/Naresh
+2010-11-27 08:29:48,115 DEBUG: Loaded 0 accounts
+2010-11-27 08:29:48,115 DEBUG: Loaded 0 user commands
+2010-11-27 08:29:48,117 DEBUG: Loaded 0 bots
+2010-11-27 08:29:48,118 INFO: Starting main loop
+2010-11-27 08:29:54,155 DEBUG: New user connection from 130.245.206.27:8928/
+2010-11-27 08:29:54,157 DEBUG: Error adding user
+2010-11-27 08:29:54,161 DEBUG: User logged in: 130.245.206.27:8928/Naresh
+2010-11-27 08:31:58,223 DEBUG: Loaded 0 accounts
+2010-11-27 08:31:58,224 DEBUG: Loaded 0 user commands
+2010-11-27 08:31:58,224 DEBUG: Loaded 0 bots
+2010-11-27 08:31:58,226 INFO: Starting main loop
+2010-11-27 08:32:05,134 DEBUG: New user connection from 130.245.206.27:8945/
+2010-11-27 08:32:05,141 DEBUG: User logged in: 130.245.206.27:8945/Naresh
+2010-11-27 08:33:42,789 DEBUG: Loaded 0 accounts
+2010-11-27 08:33:42,789 DEBUG: Loaded 0 user commands
+2010-11-27 08:33:42,789 DEBUG: Loaded 0 bots
+2010-11-27 08:33:42,790 INFO: Starting main loop
+2010-11-27 08:33:49,506 DEBUG: New user connection from 130.245.206.27:8956/
+2010-11-27 08:33:49,519 DEBUG: User logged in: 130.245.206.27:8956/Naresh
+2010-11-27 08:34:59,444 DEBUG: Client disconnected: 130.245.206.27:8956/Naresh
+2010-11-27 08:34:59,444 DEBUG: Removing User: 130.245.206.27:8956/Naresh
+2010-11-27 08:47:51,296 DEBUG: New user connection from 130.245.206.27:9075/
+2010-11-27 08:47:51,305 DEBUG: User logged in: 130.245.206.27:9075/Naresh

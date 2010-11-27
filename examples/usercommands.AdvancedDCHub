@@ -1,0 +1,90 @@
+# Format of user commands:
+# Name = Who Order Type Context Details
+# Name is the internal name of the user command
+# If the command is related to a bot, it should be in the form:
+#  BotName$CommandName
+# Who decides who gets the command, a combination of the following
+#  1 - User
+#  2 - Op
+#  4 - Account holder with bot name (or command name if no related bot) in args
+#  8 - Bot with bot name must be logged in
+#  So a Who of 11 means that the user must be logged in, the user must be an 
+#   op, and the related bot must be logged in.
+# Order is the order of the commands sent to the user, commands are sent in
+#  ascending order (this can be an integer or a float
+# For Type, Context, and Details, see:
+#  http://dcplusplus.sourceforge.net/wiki/index.php/UserCommand%20command
+# For Details, note that py-dchub already does translations for $ and |.
+# See the usercommand file in the examples folder for examples
+
+[dchub-usercommands]
+
+# User Commands
+
+AdvancedBot$BanNickIP = 11 2.1 2 6 Punish\Ban IP$To: AdvancedBot From: %[mynick] $<%[mynick]> ban <>%[nick] %[line:Time] %[line:Reason]|
+AdvancedBot$BanNick = 11 2.2 2 6 Punish\Ban Nick$To: AdvancedBot From: %[mynick] $<%[mynick]> ban %%%[nick] %[line:Time] %[line:Reason]|
+AdvancedBot$SilenceNickIP = 11 2.3 2 6 Punish\Silence IP$To: AdvancedBot From: %[mynick] $<%[mynick]> silence <>%[nick] %[line:Time] %[line:Reason]|
+AdvancedBot$SilenceNick = 11 2.4 2 6 Punish\Silence Nick$To: AdvancedBot From: %[mynick] $<%[mynick]> silence %%%[nick] %[line:Time] %[line:Reason]|
+AdvancedBot$StupidifyNickIP = 11 2.5 2 6 Punish\Stupidify IP$To: AdvancedBot From: %[mynick] $<%[mynick]> stupidify <>%[nick] %[line:Time] %[line:Reason]|
+AdvancedBot$StupidifyNick = 11 2.6 2 6 Punish\Stupidify Nick$To: AdvancedBot From: %[mynick] $<%[mynick]> stupidify %%%[nick] %[line:Time] %[line:Reason]|
+
+AdvancedBot$VerifyUser = 11 4.1 2 6 Verify\Verify$To: AdvancedBot From: %[mynick] $<%[mynick]> verify %[nick] %[line:Note]|
+AdvancedBot$UnverifyUser = 11 4.2 2 6 Verify\Unverify$To: AdvancedBot From: %[mynick] $<%[mynick]> unverify %[nick] %[line:Note]|
+
+AdvancedBot$AddNote = 11 5.2 2 6 Add Note$To: AdvancedBot From: %[mynick] $<%[mynick]> note %[nick] %[line:Note]|
+
+AdvancedBot$HistoryAll = 11 6.1 2 6 History\All$To: AdvancedBot From: %[mynick] $<%[mynick]> history %[nick]|
+AdvancedBot$HistoryJoins = 11 6.2 2 6 History\Joins$To: AdvancedBot From: %[mynick] $<%[mynick]> history %[nick] 1|
+AdvancedBot$HistoryPunishments = 11 6.3 2 6 History\Punishments$To: AdvancedBot From: %[mynick] $<%[mynick]> history %[nick] 345|
+AdvancedBot$HistoryVerify = 11 6.4 2 6 History\Verifies$To: AdvancedBot From: %[mynick] $<%[mynick]> history %[nick] 56|
+AdvancedBot$HistoryNotes = 11 6.5 2 6 History\Notes$To: AdvancedBot From: %[mynick] $<%[mynick]> history %[nick] 7|
+AdvancedBot$HistoryAdvanced = 11 6.6 2 6 History\Advanced$To: AdvancedBot From: %[mynick] $<%[mynick]> history %[nick] %[line:Types 1=Join 345=Punish 6=Verify 7=Note] %[line:In The Last x Days]|
+
+AdvancedBot$Hostname = 11 8.0 2 6 Hostname$To: AdvancedBot From: %[mynick] $<%[mynick]> hostname %[nick]|
+
+# Hub Commands
+
+AdvancedBot$ChangePassword = 9 1.0 2 1 Change Password$To: AdvancedBot From: %[mynick] $<%[mynick]> password %[line:New Password]|
+AdvancedBot$GetTorrents = 9 1.1 2 1 Torrents\Get$To: AdvancedBot From: %[mynick] $<%[mynick]> torrent get|
+AdvancedBot$PostTorrent = 9 1.2 2 1 Torrents\Post$To: AdvancedBot From: %[mynick] $<%[mynick]> torrent %[line:Location (include http:// or ftp://)] %[line:Description]|
+AdvancedBot$ApproveTorrent = 11 1.3 2 1 Torrents\Approve$To: AdvancedBot From: %[mynick] $<%[mynick]> torrent approve %[line:Torrent ID]|
+AdvancedBot$RemoveTorrent = 11 1.4 2 1 Torrents\Remove$To: AdvancedBot From: %[mynick] $<%[mynick]> torrent remove %[line:Torrent ID]|
+
+AdvancedBot$BanIP = 11 2.1 2 1 Punish\Ban IP$To: AdvancedBot From: %[mynick] $<%[mynick]> ban %[line:IP] %[line:Time] %[line:Reason]|
+AdvancedBot$BanIPNick = 11 2.2 2 1 Punish\Ban Nick$To: AdvancedBot From: %[mynick] $<%[mynick]> ban %%%[line:Nick] %[line:Time] %[line:Reason]|
+AdvancedBot$SilenceIP = 11 2.3 2 1 Punish\Silence IP$To: AdvancedBot From: %[mynick] $<%[mynick]> silence %[line:IP] %[line:Time] %[line:Reason]|
+AdvancedBot$SilenceIPNick = 11 2.4 2 1 Punish\Silence Nick$To: AdvancedBot From: %[mynick] $<%[mynick]> silence %%%[line:Nick] %[line:Time] %[line:Reason]|
+AdvancedBot$StupidifyIP = 11 2.5 2 1 Punish\Stupidify IP$To: AdvancedBot From: %[mynick] $<%[mynick]> stupidify %[line:IP] %[line:Time]|
+AdvancedBot$StupidifyIPNick = 11 2.6 2 1 Punish\Stupidify Nick$To: AdvancedBot From: %[mynick] $<%[mynick]> stupidify %%%[line:Nick] %[line:Time]|
+
+AdvancedBot$VerifyNick = 11 4.1 2 1 Verify\Verify$To: AdvancedBot From: %[mynick] $<%[mynick]> verify %[line:Nick] %[line:Note]|
+AdvancedBot$UnverifyNick = 11 4.2 2 1 Verify\Unverify$To: AdvancedBot From: %[mynick] $<%[mynick]> unverify %[line:Nick] %[line:Note]|
+
+AdvancedBot$AddNoteNick = 11 5.1 2 1 Add Note$To: AdvancedBot From: %[mynick] $<%[mynick]> note %[line:Nick] %[line:Note]|
+
+AdvancedBot$HistoryNickAll = 11 6.1 2 1 History\All$To: AdvancedBot From: %[mynick] $<%[mynick]> history %[line:Nick]|
+AdvancedBot$HistoryNickJoins = 11 6.2 2 1 History\Joins$To: AdvancedBot From: %[mynick] $<%[mynick]> history %[line:Nick] 1|
+AdvancedBot$HistoryNickPunishments = 11 6.3 2 1 History\Punishments$To: AdvancedBot From: %[mynick] $<%[mynick]> history %[line:Nick] 345|
+AdvancedBot$HistoryNickVerify = 11 6.4 2 1 History\Verifies$To: AdvancedBot From: %[mynick] $<%[mynick]> history %[line:Nick] 56|
+AdvancedBot$HistoryNickNotes = 11 6.5 2 1 History\Notes$To: AdvancedBot From: %[mynick] $<%[mynick]> history %[line:Nick] 7|
+AdvancedBot$HistoryNickAdvanced = 11 6.6 2 1 History\Advanced$To: AdvancedBot From: %[mynick] $<%[mynick]> history %[line:Nick] %[line:Types 1=Join 345=Punish 6=Verify 7=Note] %[line:In The Last x Days]|
+
+AdvancedBot$ListUnverified = 11 7.0 2 1 List\Unverified Users$To: AdvancedBot From: %[mynick] $<%[mynick]> list unverified|
+AdvancedBot$ListAccountsUsingIP = 11 7.1 2 1 List\Accounts Using IP$To: AdvancedBot From: %[mynick] $<%[mynick]> list ip %[line:IP or IP range]|
+AdvancedBot$ListSimilarAccounts = 11 7.2 2 1 List\Similar Accounts$To: AdvancedBot From: %[mynick] $<%[mynick]> list nick %[line:Nick Substring]|
+AdvancedBot$ListBans = 11 7.3 2 1 List\Bans$To: AdvancedBot From: %[mynick] $<%[mynick]> list bans|
+AdvancedBot$ListSilences = 11 7.4 2 1 List\Silences$To: AdvancedBot From: %[mynick] $<%[mynick]> list silences|
+AdvancedBot$ListStupidifies = 11 7.5 2 1 List\Stupdifies$To: AdvancedBot From: %[mynick] $<%[mynick]> list stupidifies|
+
+AdvancedBot$AdvancedBotChat = 11 8.0 2 1 AdvancedBot Chat$To: AdvancedBot From: %[mynick] $<%[mynick]> chat %[line:Chat Message]|
+AdvancedBot$GetPassword = 11 8.05 2 1 Get Password$To: AdvancedBot From: %[mynick] $<%[mynick]> getpassword %[line:Account Nick]|
+
+PythonBot$StartLog = 7 8.1 2 1 Log\Start Logging$To: AdvancedBot From: %[mynick] $<%[mynick]> log start %[line:LogLevel]|
+PythonBot$ChangeLogLevel = 7 8.2 2 1 Log\Change Log Level$To: AdvancedBot From: %[mynick] $<%[mynick]> log level %[line:LogLevel]|
+PythonBot$StopLog = 7 8.3 2 1 Log\Stop Logging$To: AdvancedBot From: %[mynick] $<%[mynick]> log stop|
+
+PythonBot$PythonCommand = 7 9.1 2 1 Python\Execute Python Command$To: AdvancedBot From: %[mynick] $<%[mynick]> python %[line:Python Code]|
+PythonBot$SQLCommand = 7 9.2 2 1 Python\Execute SQL$To: AdvancedBot From: %[mynick] $<%[mynick]> sql %[line:SQL Code]|
+PythonBot$ReloadBots = 7 9.3 2 1 Python\Reload Bots$ReloadBots|
+PythonBot$ReloadHub = 7 9.4 2 1 Python\Reload Hub$To: AdvancedBot From: %[mynick] $<%[mynick]> python hub.reload()|
+PythonBot$Scrub = 7 9.5 2 1 Python\Scrub Punishments$To: AdvancedBot From: %[mynick] $<%[mynick]> scrub all|

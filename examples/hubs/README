@@ -1,0 +1,7 @@
+This directory contains subclasses of DCHub, which change the hub's default 
+behavior.  While you can use bots to accomplish pretty much anything you can 
+with subclasses, often the subclassing method is simpler, since it doesn't
+involve wrapping functions, and you don't have to worry about loading/reloading.
+
+To use one of these subclasses, move it to the directory with DCHub.py, and run
+it instead of DCHub.py.

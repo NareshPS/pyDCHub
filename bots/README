@@ -1,0 +1,3 @@
+Place bots you want to run in this folder.  Note that bots can change any
+aspect of the hub and are limited only by Python and/or the operating system,
+so make sure to do some due diligence before you add a bot to this folder.
