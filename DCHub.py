@@ -11,6 +11,9 @@ import socket
 import sys
 import time
 
+''' SSP: '''
+import FBConnectIface
+
 if os.name == 'posix':
     try: 
         import grp
@@ -1788,7 +1791,9 @@ class DCHub(object):
         pass
     
     def gotFBAuthRand(self, user, randStr, *args):
-        if randStr == '1000':
+        fbConnIface = FBConnectIface.FBConnectIface()
+        
+        if fbConnIface.isValidToken(randStr) is True:
             print True
             user.validcommands = set('ValidateNick Key'.split())
             self.giveLock(user)

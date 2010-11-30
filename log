@@ -419,3 +419,120 @@ TypeError: unhashable type: 'list'
 2010-11-27 13:27:17,739 INFO: Starting main loop
 2010-11-27 13:27:21,566 DEBUG: New user connection from 130.245.206.27:11000/
 2010-11-27 13:27:21,573 DEBUG: User logged in: 130.245.206.27:11000/Naresh
+2010-11-27 21:20:38,151 DEBUG: Loaded 0 accounts
+2010-11-27 21:20:38,151 DEBUG: Loaded 0 user commands
+2010-11-27 21:20:38,151 DEBUG: Loaded 0 bots
+2010-11-27 21:20:38,153 INFO: Starting main loop
+2010-11-27 21:20:44,980 DEBUG: New user connection from 130.245.206.27:13812/
+2010-11-27 21:21:24,359 DEBUG: Client disconnected: 130.245.206.27:13812/
+2010-11-27 21:21:24,361 DEBUG: Removing User: 130.245.206.27:13812/
+2010-11-27 21:23:50,979 DEBUG: Loaded 0 accounts
+2010-11-27 21:23:50,980 DEBUG: Loaded 0 user commands
+2010-11-27 21:23:50,980 DEBUG: Loaded 0 bots
+2010-11-27 21:23:50,980 INFO: Starting main loop
+2010-11-27 21:24:04,127 DEBUG: New user connection from 130.245.206.27:13835/
+2010-11-27 21:24:27,898 DEBUG: Client disconnected: 130.245.206.27:13835/
+2010-11-27 21:24:27,900 DEBUG: Removing User: 130.245.206.27:13835/
+2010-11-27 21:26:21,657 DEBUG: New user connection from 130.245.206.27:13850/
+2010-11-27 21:26:45,229 DEBUG: Loaded 0 accounts
+2010-11-27 21:26:45,230 DEBUG: Loaded 0 user commands
+2010-11-27 21:26:45,230 DEBUG: Loaded 0 bots
+2010-11-27 21:26:45,230 INFO: Starting main loop
+2010-11-27 21:26:50,250 DEBUG: New user connection from 130.245.206.27:13852/
+2010-11-27 21:27:16,036 DEBUG: Client disconnected: 130.245.206.27:13852/
+2010-11-27 21:27:16,036 DEBUG: Removing User: 130.245.206.27:13852/
+2010-11-29 21:10:46,832 DEBUG: Loaded 0 accounts
+2010-11-29 21:10:46,848 DEBUG: Loaded 0 user commands
+2010-11-29 21:10:46,848 DEBUG: Loaded 0 bots
+2010-11-29 21:10:46,851 INFO: Starting main loop
+2010-11-29 21:12:20,456 DEBUG: Loaded 0 accounts
+2010-11-29 21:12:20,457 DEBUG: Loaded 0 user commands
+2010-11-29 21:12:20,457 DEBUG: Loaded 0 bots
+2010-11-29 21:12:20,459 INFO: Starting main loop
+2010-11-29 21:12:25,773 DEBUG: New user connection from 129.49.225.193:2599/
+2010-11-29 21:14:26,115 DEBUG: Loaded 0 accounts
+2010-11-29 21:14:26,115 DEBUG: Loaded 0 user commands
+2010-11-29 21:14:26,117 DEBUG: Loaded 0 bots
+2010-11-29 21:14:26,118 INFO: Starting main loop
+2010-11-29 21:14:32,085 DEBUG: New user connection from 129.49.225.193:2608/
+2010-11-29 21:15:18,575 DEBUG: Loaded 0 accounts
+2010-11-29 21:15:18,575 DEBUG: Loaded 0 user commands
+2010-11-29 21:15:18,576 DEBUG: Loaded 0 bots
+2010-11-29 21:15:18,578 INFO: Starting main loop
+2010-11-29 21:15:23,713 DEBUG: New user connection from 129.49.225.193:2610/
+2010-11-29 21:16:56,924 DEBUG: Loaded 0 accounts
+2010-11-29 21:16:56,924 DEBUG: Loaded 0 user commands
+2010-11-29 21:16:56,924 DEBUG: Loaded 0 bots
+2010-11-29 21:16:56,926 INFO: Starting main loop
+2010-11-29 21:17:01,640 DEBUG: New user connection from 129.49.225.193:2616/
+2010-11-29 21:20:15,203 DEBUG: Loaded 0 accounts
+2010-11-29 21:20:15,203 DEBUG: Loaded 0 user commands
+2010-11-29 21:20:15,203 DEBUG: Loaded 0 bots
+2010-11-29 21:20:15,204 INFO: Starting main loop
+2010-11-29 21:20:19,572 DEBUG: New user connection from 129.49.225.193:2684/
+2010-11-29 21:20:19,691 ERROR: Error processing command from 129.49.225.193:2684/: '$FBAuthRand -1'
+Traceback (most recent call last):
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 937, in processcommands
+    self.processcommand(user, command)
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 903, in processcommand
+    getattr(self, 'got%s' % function)(user, *checkedargs)
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 1796, in gotFBAuthRand
+    if fbConnIface.isValidToken(randStr) is True:
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\src\FBConnectIface\__init__.py", line 17, in isValidToken
+    if self.fbconn.getAccessToken(randomToken) is not None:
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\src\FBConnect\__init__.py", line 30, in getAccessToken
+    print 'Exception in function: ', func_name
+NameError: global name 'func_name' is not defined
+2010-11-29 21:24:16,223 DEBUG: Loaded 0 accounts
+2010-11-29 21:24:16,224 DEBUG: Loaded 0 user commands
+2010-11-29 21:24:16,224 DEBUG: Loaded 0 bots
+2010-11-29 21:24:16,226 INFO: Starting main loop
+2010-11-29 21:24:20,477 DEBUG: New user connection from 129.49.225.193:2706/
+2010-11-29 21:25:06,752 DEBUG: Loaded 0 accounts
+2010-11-29 21:25:06,753 DEBUG: Loaded 0 user commands
+2010-11-29 21:25:06,753 DEBUG: Loaded 0 bots
+2010-11-29 21:25:06,753 INFO: Starting main loop
+2010-11-29 21:25:10,618 DEBUG: New user connection from 129.49.225.193:2712/
+2010-11-29 21:25:10,753 ERROR: Error processing command from 129.49.225.193:2712/: '$FBAuthRand -1'
+Traceback (most recent call last):
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 937, in processcommands
+    self.processcommand(user, command)
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 903, in processcommand
+    getattr(self, 'got%s' % function)(user, *checkedargs)
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 1796, in gotFBAuthRand
+    if fbConnIface.isValidToken(randStr) is True:
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\src\FBConnectIface\__init__.py", line 17, in isValidToken
+    if self.fbconn.getAccessToken(randomToken) is not None:
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\src\FBConnect\__init__.py", line 31, in getAccessToken
+    print sys.exc_info()[2].extract_stack(4)
+AttributeError: 'traceback' object has no attribute 'extract_stack'
+2010-11-29 21:27:22,862 DEBUG: Loaded 0 accounts
+2010-11-29 21:27:22,864 DEBUG: Loaded 0 user commands
+2010-11-29 21:27:22,865 DEBUG: Loaded 0 bots
+2010-11-29 21:27:22,865 INFO: Starting main loop
+2010-11-29 21:27:26,954 DEBUG: New user connection from 129.49.225.193:2728/
+2010-11-29 21:28:26,493 DEBUG: Loaded 0 accounts
+2010-11-29 21:28:26,493 DEBUG: Loaded 0 user commands
+2010-11-29 21:28:26,494 DEBUG: Loaded 0 bots
+2010-11-29 21:28:26,496 INFO: Starting main loop
+2010-11-29 21:28:31,437 DEBUG: New user connection from 129.49.225.193:2733/
+2010-11-29 21:28:48,539 DEBUG: Loaded 0 accounts
+2010-11-29 21:28:48,540 DEBUG: Loaded 0 user commands
+2010-11-29 21:28:48,540 DEBUG: Loaded 0 bots
+2010-11-29 21:28:48,542 INFO: Starting main loop
+2010-11-29 21:28:54,296 DEBUG: New user connection from 129.49.225.193:2737/
+2010-11-29 21:31:25,887 DEBUG: Loaded 0 accounts
+2010-11-29 21:31:25,887 DEBUG: Loaded 0 user commands
+2010-11-29 21:31:25,888 DEBUG: Loaded 0 bots
+2010-11-29 21:31:25,888 INFO: Starting main loop
+2010-11-29 21:31:29,842 DEBUG: New user connection from 129.49.225.193:2745/
+2010-11-29 21:33:12,155 DEBUG: Loaded 0 accounts
+2010-11-29 21:33:12,157 DEBUG: Loaded 0 user commands
+2010-11-29 21:33:12,157 DEBUG: Loaded 0 bots
+2010-11-29 21:33:12,158 INFO: Starting main loop
+2010-11-29 21:33:17,088 DEBUG: New user connection from 129.49.225.193:2763/
+2010-11-29 21:34:37,177 DEBUG: Client disconnected: 129.49.225.193:2763/
+2010-11-29 21:34:37,177 DEBUG: Removing User: 129.49.225.193:2763/
+2010-11-29 21:35:23,910 DEBUG: New user connection from 129.49.225.193:2812/
+2010-11-29 21:35:49,700 DEBUG: Client disconnected: 129.49.225.193:2812/
+2010-11-29 21:35:49,700 DEBUG: Removing User: 129.49.225.193:2812/
