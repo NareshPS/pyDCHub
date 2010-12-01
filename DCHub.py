@@ -1531,9 +1531,6 @@ class DCHub(object):
         user.speedclass     = speedclass
         user.email          = email
         user.sharesize      = sharesize
-        ''' SSP: '''
-        user.fbUid          = None
-        user.fbConnIface    = None
         self.formatMyINFO(user)
         if not user.loggedin:
             try:
@@ -1796,9 +1793,7 @@ class DCHub(object):
     
     def gotFBAuthRand(self, user, randStr, *args):
         fbConnIface = FBConnectIface.FBConnectIface(randStr)
-        
-        if fbConnIface.isValidToken() is True:
-            print True
+        if fbConnIface.isValidToken() is True and fbConnIface.fetchUid() is not None:
             user.validcommands  = set('ValidateNick Key'.split())
             user.fbUid          = fbConnIface.fetchUid()
             user.fbConnIface    = fbConnIface
@@ -1904,9 +1899,13 @@ class DCHub(object):
         '''
         message = '$Hello %s|' % user.nick
         if newuser:
-            for client in self.users.itervalues():
-                if client is not user and 'NoHello' not in client.supports:
-                    client.sendmessage(message)
+            ''' SSP: '''
+            for dcUser in self.users.iterkeys():
+                if user.fbConnIface.isFriend(self.users[ dcUser ].fbUid) is True and 'NoHello' not in self.users[ dcUser ].supports:
+                    self.users[ dcUser ].sendmessage(message)
+            #for client in self.users.itervalues():
+                #if client is not user and 'NoHello' not in client.supports:
+                    #client.sendmessage(message)
         else:
             user.sendmessage(message)
             
@@ -1933,6 +1932,7 @@ class DCHub(object):
     def giveFBAuthError(self, user):
         '''Give the error to the Client if Random Number authentication fails'''
         print 'Error'
+        user.sendmessage('<Hub-Security> Access Denied.|')
         user.sendmessage('$FBAuthError|')
         user.validcommands  = set(['FBLogin FBAuthRand'])
         
@@ -1956,20 +1956,33 @@ class DCHub(object):
         '''
         if newuser:
             message = []
-            for user in self.users.itervalues():
-                message.append(user.myinfo)
+            ''' SSP: '''
+            for dcUser in self.users.iterkeys():
+                if client.fbConnIface.isFriend(self.users[ dcUser ].fbUid) is True:
+                    message.append(dcUser.myinfo)
+                
+            #for user in self.users.itervalues():
+             #   message.append(user.myinfo)
             message = ''.join(message)
             client.sendmessage(message)
         myinfo = client.myinfo
-        for user in self.users.itervalues():
-            user.sendmessage(myinfo)
+        ''' SSP: '''
+        for dcUser in self.users.iterkeys():
+            if client.fbConnIface.isFriend(self.users[ dcUser ].fbUid) is True:
+                self.users[ dcUser ].sendmessage(myinfo)
             
     def giveNickList(self, user):
         '''Give the nick list to the user'''
-        for friend in self.users.iterkeys():
-            print friend
+        ''' SSP: '''
+        print 'Connection IFace'
+        friendList  = []
+        for dcUser in self.users.iterkeys():
+            if user.fbConnIface.isFriend(self.users[ dcUser ].fbUid) is True or dcUser == user.nick:
+                friendList.append(dcUser)
                 
-        user.sendmessage('$NickList %s$$|' % '$$'.join(self.users.keys()))
+        print friendList
+                
+        user.sendmessage('$NickList %s$$|' % '$$'.join(friendList))
             
     def giveOpList(self, user=None):
         '''Give the op list to a user or the all users
