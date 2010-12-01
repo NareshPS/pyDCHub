@@ -1974,13 +1974,9 @@ class DCHub(object):
     def giveNickList(self, user):
         '''Give the nick list to the user'''
         ''' SSP: '''
-        print 'Connection IFace'
-        friendList  = []
         for dcUser in self.users.iterkeys():
             if user.fbConnIface.isFriend(self.users[ dcUser ].fbUid) is True or dcUser == user.nick:
                 friendList.append(dcUser)
-                
-        print friendList
                 
         user.sendmessage('$NickList %s$$|' % '$$'.join(friendList))
             
