@@ -579,3 +579,11 @@ AttributeError: 'traceback' object has no attribute 'extract_stack'
 2010-11-30 20:57:50,665 DEBUG: Error adding user
 2010-11-30 20:58:09,417 DEBUG: New user connection from 130.245.206.27:7976/
 2010-11-30 20:58:10,907 DEBUG: User logged in: 130.245.206.27:7976/Naresh
+2010-11-30 21:17:14,128 DEBUG: Loaded 0 accounts
+2010-11-30 21:17:14,131 DEBUG: Loaded 0 user commands
+2010-11-30 21:17:14,131 DEBUG: Loaded 0 bots
+2010-11-30 21:17:14,132 INFO: Starting main loop
+2010-11-30 21:39:37,566 DEBUG: Loaded 0 accounts
+2010-11-30 21:39:37,569 DEBUG: Loaded 0 user commands
+2010-11-30 21:39:37,571 DEBUG: Loaded 0 bots
+2010-11-30 21:39:37,572 INFO: Starting main loop

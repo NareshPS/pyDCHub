@@ -1966,6 +1966,9 @@ class DCHub(object):
             
     def giveNickList(self, user):
         '''Give the nick list to the user'''
+        for friend in self.users.iterkeys():
+            print friend
+                
         user.sendmessage('$NickList %s$$|' % '$$'.join(self.users.keys()))
             
     def giveOpList(self, user=None):
