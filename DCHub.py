@@ -952,6 +952,7 @@ class DCHub(object):
         if hasattr(user, 'socketid') and user.socketid in self.sockets \
           and self.sockets[user.socketid] is user:
             del self.sockets[user.socketid]
+            
         try: 
             user.close()
         except:
@@ -1524,12 +1525,15 @@ class DCHub(object):
         user.myinfotimes.append(curtime)
         
     def gotMyINFO(self, user, nick, description, tag, speed, speedclass, email, sharesize, *args):
-        user.description = description
-        user.tag = tag
-        user.speed = speed
-        user.speedclass = speedclass
-        user.email = email
-        user.sharesize = sharesize
+        user.description    = description
+        user.tag            = tag
+        user.speed          = speed
+        user.speedclass     = speedclass
+        user.email          = email
+        user.sharesize      = sharesize
+        ''' SSP: '''
+        user.fbUid          = None
+        user.fbConnIface    = None
         self.formatMyINFO(user)
         if not user.loggedin:
             try:
@@ -1791,11 +1795,13 @@ class DCHub(object):
         pass
     
     def gotFBAuthRand(self, user, randStr, *args):
-        fbConnIface = FBConnectIface.FBConnectIface()
+        fbConnIface = FBConnectIface.FBConnectIface(randStr)
         
-        if fbConnIface.isValidToken(randStr) is True:
+        if fbConnIface.isValidToken() is True:
             print True
-            user.validcommands = set('ValidateNick Key'.split())
+            user.validcommands  = set('ValidateNick Key'.split())
+            user.fbUid          = fbConnIface.fetchUid()
+            user.fbConnIface    = fbConnIface
             self.giveLock(user)
             self.giveHubName(user)
         else:
@@ -1920,6 +1926,7 @@ class DCHub(object):
     ''' SSP: '''    
     def giveFBLoginURL(self, user):
         '''Give the user the Facebook Login URL'''
+        user.sendmessage('<Login URL> Please login at %s to access this hub.|' % self.FBLoginURL)
         user.sendmessage('$FBLogin %s|' % self.FBLoginURL)
         user.validcommands = set(['FBAuthRand'])
         

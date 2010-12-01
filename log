@@ -536,3 +536,46 @@ AttributeError: 'traceback' object has no attribute 'extract_stack'
 2010-11-29 21:35:23,910 DEBUG: New user connection from 129.49.225.193:2812/
 2010-11-29 21:35:49,700 DEBUG: Client disconnected: 129.49.225.193:2812/
 2010-11-29 21:35:49,700 DEBUG: Removing User: 129.49.225.193:2812/
+2010-11-30 20:04:46,233 DEBUG: Loaded 0 accounts
+2010-11-30 20:04:46,279 DEBUG: Loaded 0 user commands
+2010-11-30 20:04:46,279 DEBUG: Loaded 0 bots
+2010-11-30 20:04:46,280 INFO: Starting main loop
+2010-11-30 20:04:52,062 DEBUG: New user connection from 130.245.206.27:7608/
+2010-11-30 20:05:24,000 DEBUG: Client disconnected: 130.245.206.27:7608/
+2010-11-30 20:05:24,002 DEBUG: Removing User: 130.245.206.27:7608/
+2010-11-30 20:05:24,960 DEBUG: Removing User: 130.245.206.27:7628/
+2010-11-30 20:05:24,960 DEBUG: Error adding user
+2010-11-30 20:05:52,000 DEBUG: Removing User: 130.245.206.27:7634/
+2010-11-30 20:05:52,000 DEBUG: Error adding user
+2010-11-30 20:06:01,625 DEBUG: New user connection from 130.245.206.27:7637/
+2010-11-30 20:06:58,492 DEBUG: Loaded 0 accounts
+2010-11-30 20:06:58,493 DEBUG: Loaded 0 user commands
+2010-11-30 20:06:58,493 DEBUG: Loaded 0 bots
+2010-11-30 20:06:58,494 INFO: Starting main loop
+2010-11-30 20:07:03,815 DEBUG: New user connection from 130.245.206.27:7645/
+2010-11-30 20:07:08,092 DEBUG: User logged in: 130.245.206.27:7645/Naresh
+2010-11-30 20:09:33,578 DEBUG: Loaded 0 accounts
+2010-11-30 20:09:33,584 DEBUG: Loaded 0 user commands
+2010-11-30 20:09:33,585 DEBUG: Loaded 0 bots
+2010-11-30 20:09:33,585 INFO: Starting main loop
+2010-11-30 20:09:40,177 DEBUG: New user connection from 130.245.206.27:7676/
+2010-11-30 20:09:40,447 DEBUG: User logged in: 130.245.206.27:7676/Naresh
+2010-11-30 20:46:49,938 DEBUG: Loaded 0 accounts
+2010-11-30 20:46:49,940 DEBUG: Loaded 0 user commands
+2010-11-30 20:46:49,940 DEBUG: Loaded 0 bots
+2010-11-30 20:46:49,943 INFO: Starting main loop
+2010-11-30 20:56:55,038 DEBUG: Loaded 0 accounts
+2010-11-30 20:56:55,039 DEBUG: Loaded 0 user commands
+2010-11-30 20:56:55,039 DEBUG: Loaded 0 bots
+2010-11-30 20:56:55,040 INFO: Starting main loop
+2010-11-30 20:57:05,507 DEBUG: New user connection from 130.245.206.27:7956/
+2010-11-30 20:57:37,483 DEBUG: Client disconnected: 130.245.206.27:7956/
+2010-11-30 20:57:37,483 DEBUG: Removing User: 130.245.206.27:7956/
+2010-11-30 20:57:38,443 DEBUG: Removing User: 130.245.206.27:7973/
+2010-11-30 20:57:38,444 DEBUG: Error adding user
+2010-11-30 20:57:46,510 DEBUG: Removing User: 130.245.206.27:7974/
+2010-11-30 20:57:46,512 DEBUG: Error adding user
+2010-11-30 20:57:50,665 DEBUG: Removing User: 130.245.206.27:7975/
+2010-11-30 20:57:50,665 DEBUG: Error adding user
+2010-11-30 20:58:09,417 DEBUG: New user connection from 130.245.206.27:7976/
+2010-11-30 20:58:10,907 DEBUG: User logged in: 130.245.206.27:7976/Naresh

@@ -35,7 +35,6 @@ class FBUser:
     def fetchUid(self):
         try:
             user    = self.fbUgraph.get_object(self.fbUself)
-            print user
         except:
             print 'Error fetching UID'
             return None

@@ -26,7 +26,7 @@ class FBConnect:
             userTuple   = self.db_conn.FBDBQuery(randomToken)
             
             if userTuple is not None:
-                accessToken = userTuple[ 0 ][ 2 ]
+                accessToken = userTuple[ 2 ]
         except:
             print 'Exception in function: '
             traceback.print_exception(sys.exc_info()[ 0 ], sys.exc_info()[ 1 ], sys.exc_info()[ 2 ], limit=4)
