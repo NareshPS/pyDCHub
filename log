@@ -826,3 +826,314 @@ AttributeError: 'traceback' object has no attribute 'extract_stack'
 2010-11-30 23:48:49,727 DEBUG: User logged in: 130.245.206.27:9096/Naresh
 2010-11-30 23:49:12,711 DEBUG: New user connection from 130.245.204.140:62599/
 2010-11-30 23:49:16,266 DEBUG: User logged in: 130.245.204.140:62599/nkb
+2010-12-04 19:50:33,352 DEBUG: Loaded 0 accounts
+2010-12-04 19:50:33,380 DEBUG: Loaded 0 user commands
+2010-12-04 19:50:33,381 DEBUG: Loaded 0 bots
+2010-12-04 19:50:33,382 INFO: Starting main loop
+2010-12-04 19:55:55,903 DEBUG: New user connection from 129.49.235.138:2157/
+2010-12-04 19:55:59,614 DEBUG: User logged in: 129.49.235.138:2157/Naresh
+2010-12-04 19:56:05,203 INFO: Error logging in user
+2010-12-04 19:57:20,456 DEBUG: New user connection from 130.245.204.140:49220/
+2010-12-04 20:02:31,552 DEBUG: Loaded 0 accounts
+2010-12-04 20:02:31,553 DEBUG: Loaded 0 user commands
+2010-12-04 20:02:31,553 DEBUG: Loaded 0 bots
+2010-12-04 20:02:31,555 INFO: Starting main loop
+2010-12-04 20:03:28,316 DEBUG: New user connection from 130.245.203.167:58143/
+2010-12-04 20:03:59,971 DEBUG: New user connection from 129.49.235.138:2201/
+2010-12-04 20:04:04,727 DEBUG: User logged in: 129.49.235.138:2201/Naresh
+2010-12-04 20:04:08,799 INFO: Error logging in user
+2010-12-04 20:04:43,571 DEBUG: Client disconnected: 130.245.203.167:58143/
+2010-12-04 20:04:43,572 DEBUG: Removing User: 130.245.203.167:58143/
+2010-12-04 20:04:58,561 DEBUG: New user connection from 130.245.203.167:59279/
+2010-12-04 20:04:59,989 DEBUG: Error checking args for function checkValidateNick, user 130.245.203.167:59279/, args 'Naresh'
+2010-12-04 20:05:00,010 DEBUG: Client disconnected: 130.245.203.167:59279/
+2010-12-04 20:05:00,010 DEBUG: Removing User: 130.245.203.167:59279/
+2010-12-04 20:05:11,688 DEBUG: New user connection from 130.245.204.140:49422/
+2010-12-04 20:05:14,569 DEBUG: User logged in: 130.245.204.140:49422/nkb
+2010-12-04 20:05:22,030 INFO: Error logging in user
+2010-12-04 20:06:21,783 DEBUG: New user connection from 130.245.203.167:35429/
+2010-12-04 20:06:23,072 DEBUG: Error checking args for function checkValidateNick, user 130.245.203.167:35429/, args 'Naresh'
+2010-12-04 20:06:23,076 DEBUG: Client disconnected: 130.245.203.167:35429/
+2010-12-04 20:06:23,078 DEBUG: Removing User: 130.245.203.167:35429/
+2010-12-04 20:07:08,779 DEBUG: Removing User: 130.245.203.167:37741/
+2010-12-04 20:07:08,779 DEBUG: Error adding user
+2010-12-04 20:07:31,832 DEBUG: New user connection from 130.245.203.167:43762/
+2010-12-04 20:07:32,917 DEBUG: Error checking args for function checkValidateNick, user 130.245.203.167:43762/, args 'Naresh'
+2010-12-04 20:07:32,924 DEBUG: Client disconnected: 130.245.203.167:43762/
+2010-12-04 20:07:32,924 DEBUG: Removing User: 130.245.203.167:43762/
+2010-12-04 20:08:06,546 DEBUG: Removing User: 130.245.203.167:45560/
+2010-12-04 20:08:06,548 DEBUG: Error adding user
+2010-12-04 20:09:35,582 DEBUG: New user connection from 130.245.203.167:45785/
+2010-12-04 20:10:10,903 DEBUG: Client disconnected: 130.245.203.167:45785/
+2010-12-04 20:10:10,903 DEBUG: Removing User: 130.245.203.167:45785/
+2010-12-04 20:10:13,051 DEBUG: Removing User: 130.245.203.167:39850/
+2010-12-04 20:10:13,052 DEBUG: Error adding user
+2010-12-04 20:10:19,142 DEBUG: Removing User: 130.245.203.167:33486/
+2010-12-04 20:10:19,142 DEBUG: Error adding user
+2010-12-04 20:10:29,262 DEBUG: Removing User: 130.245.203.167:38243/
+2010-12-04 20:10:29,263 DEBUG: Error adding user
+2010-12-04 20:11:01,161 DEBUG: New user connection from 130.245.203.167:60716/
+2010-12-04 20:11:34,009 DEBUG: Client disconnected: 130.245.203.167:60716/
+2010-12-04 20:11:34,009 DEBUG: Removing User: 130.245.203.167:60716/
+2010-12-04 20:11:49,282 DEBUG: Removing User: 130.245.203.167:42348/
+2010-12-04 20:11:49,282 DEBUG: Error adding user
+2010-12-04 20:12:19,904 DEBUG: New user connection from 130.245.203.167:41758/
+2010-12-04 20:12:43,142 DEBUG: Client disconnected: 130.245.203.167:41758/
+2010-12-04 20:12:43,142 DEBUG: Removing User: 130.245.203.167:41758/
+2010-12-04 20:12:45,880 DEBUG: Removing User: 130.245.203.167:44747/
+2010-12-04 20:12:45,881 DEBUG: Error adding user
+2010-12-04 20:13:06,674 DEBUG: Removing User: 130.245.203.167:36065/
+2010-12-04 20:13:06,676 DEBUG: Error adding user
+2010-12-04 20:13:10,490 DEBUG: Client disconnected: 130.245.204.140:49422/nkb
+2010-12-04 20:13:10,492 DEBUG: Removing User: 130.245.204.140:49422/nkb
+2010-12-04 20:13:16,571 DEBUG: New user connection from 130.245.204.140:49435/
+2010-12-04 20:13:38,431 DEBUG: User logged in: 130.245.204.140:49435/nkb
+2010-12-04 20:13:43,542 INFO: Error logging in user
+2010-12-04 20:14:08,927 DEBUG: New user connection from 130.245.203.167:45223/
+2010-12-04 20:14:23,872 DEBUG: Client disconnected: 130.245.203.167:45223/
+2010-12-04 20:14:23,874 DEBUG: Removing User: 130.245.203.167:45223/
+2010-12-04 20:17:58,460 DEBUG: Client disconnected: 130.245.204.140:49435/nkb
+2010-12-04 20:17:58,460 DEBUG: Removing User: 130.245.204.140:49435/nkb
+2010-12-04 20:18:49,403 DEBUG: New user connection from 130.245.203.167:57575/
+2010-12-04 20:18:51,779 DEBUG: New user connection from 130.245.204.140:49461/
+2010-12-04 20:19:33,651 DEBUG: Client disconnected: 130.245.204.140:49461/
+2010-12-04 20:19:33,651 DEBUG: Removing User: 130.245.204.140:49461/
+2010-12-04 20:19:36,200 DEBUG: Removing User: 130.245.204.140:49473/
+2010-12-04 20:19:36,201 DEBUG: Error adding user
+2010-12-04 20:19:45,418 DEBUG: Client disconnected: 130.245.203.167:57575/
+2010-12-04 20:19:45,418 DEBUG: Removing User: 130.245.203.167:57575/
+2010-12-04 20:19:47,568 DEBUG: Removing User: 130.245.203.167:35353/
+2010-12-04 20:19:47,568 DEBUG: Error adding user
+2010-12-04 20:19:51,617 DEBUG: Removing User: 130.245.204.140:49475/
+2010-12-04 20:19:51,617 DEBUG: Error adding user
+2010-12-04 20:20:31,265 DEBUG: New user connection from 130.245.204.140:49477/
+2010-12-04 20:20:33,188 DEBUG: User logged in: 130.245.204.140:49477/nkb
+2010-12-04 20:20:36,980 INFO: Error logging in user
+2010-12-04 20:21:39,221 DEBUG: New user connection from 130.245.203.167:42325/
+2010-12-04 20:22:04,765 DEBUG: Client disconnected: 130.245.203.167:42325/
+2010-12-04 20:22:04,766 DEBUG: Removing User: 130.245.203.167:42325/
+2010-12-04 20:22:06,769 DEBUG: Removing User: 130.245.203.167:60474/
+2010-12-04 20:22:06,770 DEBUG: Error adding user
+2010-12-04 20:27:41,226 DEBUG: New user connection from 130.245.203.167:36044/
+2010-12-04 20:31:47,440 DEBUG: Client disconnected: 130.245.203.167:36044/
+2010-12-04 20:31:47,440 DEBUG: Removing User: 130.245.203.167:36044/
+2010-12-04 20:33:05,104 DEBUG: New user connection from 130.245.203.167:37448/
+2010-12-04 20:34:46,486 DEBUG: Loaded 0 accounts
+2010-12-04 20:34:46,487 DEBUG: Loaded 0 user commands
+2010-12-04 20:34:46,489 DEBUG: Loaded 0 bots
+2010-12-04 20:34:46,490 INFO: Starting main loop
+2010-12-04 20:35:00,061 DEBUG: Client disconnected: 129.49.235.138:2201/Naresh
+2010-12-04 20:35:00,061 DEBUG: Removing User: 129.49.235.138:2201/Naresh
+2010-12-04 20:35:02,700 DEBUG: New user connection from 129.49.235.138:2349/
+2010-12-04 20:35:16,332 DEBUG: Client disconnected: 130.245.203.167:37448/
+2010-12-04 20:35:16,332 DEBUG: Removing User: 130.245.203.167:37448/
+2010-12-04 20:35:30,328 DEBUG: New user connection from 130.245.203.167:50879/
+2010-12-04 20:36:05,104 DEBUG: Client disconnected: 129.49.235.138:2349/
+2010-12-04 20:36:05,105 DEBUG: Removing User: 129.49.235.138:2349/
+2010-12-04 20:36:06,417 DEBUG: Client disconnected: 130.245.204.140:49477/nkb
+2010-12-04 20:36:06,417 DEBUG: Removing User: 130.245.204.140:49477/nkb
+2010-12-04 20:36:08,171 DEBUG: New user connection from 130.245.204.140:49493/
+2010-12-04 20:36:18,776 DEBUG: User logged in: 130.245.204.140:49493/nkb
+2010-12-04 20:36:21,377 INFO: Error logging in user
+2010-12-04 20:36:42,482 DEBUG: Loaded 0 accounts
+2010-12-04 20:36:42,483 DEBUG: Loaded 0 user commands
+2010-12-04 20:36:42,483 DEBUG: Loaded 0 bots
+2010-12-04 20:36:42,484 INFO: Starting main loop
+2010-12-04 20:36:49,385 DEBUG: New user connection from 130.245.204.140:49495/
+2010-12-04 20:36:57,901 DEBUG: User logged in: 130.245.204.140:49495/nkb
+2010-12-04 20:37:04,457 INFO: Error logging in user
+2010-12-04 20:37:16,809 DEBUG: Client disconnected: 130.245.204.140:49495/nkb
+2010-12-04 20:37:16,809 DEBUG: Removing User: 130.245.204.140:49495/nkb
+2010-12-04 20:38:06,382 DEBUG: New user connection from 130.245.204.140:49517/
+2010-12-04 20:38:09,160 DEBUG: Removing User: 130.245.204.140:49517/
+2010-12-04 20:39:04,187 DEBUG: New user connection from 130.245.203.167:54372/
+2010-12-04 20:39:05,430 DEBUG: User logged in: 130.245.203.167:54372/Sanjeev
+2010-12-04 20:39:07,746 INFO: Error logging in user
+2010-12-04 20:39:54,427 DEBUG: Client disconnected: 130.245.203.167:54372/Sanjeev
+2010-12-04 20:39:54,427 DEBUG: Removing User: 130.245.203.167:54372/Sanjeev
+2010-12-04 20:39:56,719 DEBUG: Removing User: 130.245.203.167:48538/
+2010-12-04 20:39:56,719 DEBUG: Error adding user
+2010-12-04 20:40:06,290 DEBUG: New user connection from 130.245.203.167:45368/
+2010-12-04 20:40:08,706 DEBUG: User logged in: 130.245.203.167:45368/Sanjeev
+2010-12-04 20:40:12,217 INFO: Error logging in user
+2010-12-04 20:40:13,933 DEBUG: New user connection from 130.245.204.140:49529/
+2010-12-04 20:40:20,694 DEBUG: User logged in: 130.245.204.140:49529/nkb
+2010-12-04 20:40:25,509 INFO: Error logging in user
+2010-12-04 20:41:37,131 DEBUG: Client disconnected: 130.245.203.167:45368/Sanjeev
+2010-12-04 20:41:37,132 DEBUG: Removing User: 130.245.203.167:45368/Sanjeev
+2010-12-04 20:42:07,003 DEBUG: New user connection from 130.245.203.167:43663/
+2010-12-04 20:42:08,513 DEBUG: User logged in: 130.245.203.167:43663/Sanjeev
+2010-12-04 20:42:13,528 INFO: Error logging in user
+2010-12-04 20:42:52,035 DEBUG: Client disconnected: 130.245.203.167:43663/Sanjeev
+2010-12-04 20:42:52,035 DEBUG: Removing User: 130.245.203.167:43663/Sanjeev
+2010-12-04 20:42:54,726 DEBUG: Removing User: 130.245.203.167:41549/
+2010-12-04 20:42:54,726 DEBUG: Error adding user
+2010-12-04 20:43:37,674 DEBUG: New user connection from 130.245.203.167:43929/
+2010-12-04 20:43:39,026 DEBUG: User logged in: 130.245.203.167:43929/Sanjeev
+2010-12-04 20:43:43,740 INFO: Error logging in user
+2010-12-04 20:44:23,997 DEBUG: Client disconnected: 130.245.203.167:43929/Sanjeev
+2010-12-04 20:44:23,999 DEBUG: Removing User: 130.245.203.167:43929/Sanjeev
+2010-12-04 20:44:36,634 DEBUG: Removing User: 130.245.203.167:56555/
+2010-12-04 20:44:36,634 DEBUG: Error adding user
+2010-12-04 20:44:51,789 DEBUG: New user connection from 130.245.203.167:58286/
+2010-12-04 20:44:53,611 DEBUG: Removing User: 130.245.203.167:58286/
+2010-12-04 20:45:28,500 DEBUG: Removing User: 130.245.203.167:41781/
+2010-12-04 20:45:28,500 DEBUG: Error adding user
+2010-12-04 20:45:40,085 DEBUG: Removing User: 130.245.203.167:57877/
+2010-12-04 20:45:40,085 DEBUG: Error adding user
+2010-12-04 20:46:12,813 DEBUG: New user connection from 130.245.203.167:50694/
+2010-12-04 20:46:14,278 DEBUG: User logged in: 130.245.203.167:50694/Sanjeev
+2010-12-04 20:46:19,604 INFO: Error logging in user
+2010-12-04 20:48:33,750 DEBUG: Loaded 0 accounts
+2010-12-04 20:48:33,752 DEBUG: Loaded 0 user commands
+2010-12-04 20:48:33,753 DEBUG: Loaded 0 bots
+2010-12-04 20:48:33,753 INFO: Starting main loop
+2010-12-04 20:48:43,423 DEBUG: New user connection from 129.49.235.138:2577/
+2010-12-04 20:48:43,559 DEBUG: Removing User: 129.49.235.138:2577/
+2010-12-04 20:49:13,019 DEBUG: Removing User: 129.49.235.138:2591/
+2010-12-04 20:49:13,019 DEBUG: Error adding user
+2010-12-04 20:49:20,367 DEBUG: Removing User: 129.49.235.138:2592/
+2010-12-04 20:49:20,368 DEBUG: Error adding user
+2010-12-04 20:50:46,253 DEBUG: Loaded 0 accounts
+2010-12-04 20:50:46,255 DEBUG: Loaded 0 user commands
+2010-12-04 20:50:46,255 DEBUG: Loaded 0 bots
+2010-12-04 20:50:46,256 INFO: Starting main loop
+2010-12-04 20:50:56,951 DEBUG: Loaded 0 accounts
+2010-12-04 20:50:56,953 DEBUG: Loaded 0 user commands
+2010-12-04 20:50:56,953 DEBUG: Loaded 0 bots
+2010-12-04 20:50:56,954 INFO: Starting main loop
+2010-12-04 20:51:03,381 DEBUG: New user connection from 129.49.235.138:2596/
+2010-12-04 20:51:05,782 DEBUG: User logged in: 129.49.235.138:2596/Naresh
+2010-12-04 20:51:11,638 INFO: Error logging in user
+2010-12-04 20:51:14,098 DEBUG: New user connection from 130.245.204.140:49532/
+2010-12-04 20:51:37,621 DEBUG: New user connection from 130.245.203.167:35143/
+2010-12-04 20:51:37,658 DEBUG: User logged in: 130.245.204.140:49532/nkb
+2010-12-04 20:51:44,207 INFO: Error logging in user
+2010-12-04 20:51:45,358 DEBUG: Client disconnected: 130.245.203.167:35143/
+2010-12-04 20:51:45,358 DEBUG: Removing User: 130.245.203.167:35143/
+2010-12-04 20:52:03,459 DEBUG: New user connection from 130.245.203.167:37995/
+2010-12-04 20:52:06,499 DEBUG: User logged in: 130.245.203.167:37995/Sanjeev
+2010-12-04 20:53:02,818 INFO: Error logging in user
+2010-12-04 20:53:29,598 DEBUG: Loaded 0 accounts
+2010-12-04 20:53:29,599 DEBUG: Loaded 0 user commands
+2010-12-04 20:53:29,601 DEBUG: Loaded 0 bots
+2010-12-04 20:53:29,601 INFO: Starting main loop
+2010-12-04 20:53:35,186 DEBUG: New user connection from 129.49.235.138:2636/
+2010-12-04 20:53:38,026 DEBUG: User logged in: 129.49.235.138:2636/Naresh
+2010-12-04 20:53:40,223 INFO: Error logging in user
+2010-12-04 20:53:42,611 DEBUG: New user connection from 130.245.203.167:40796/
+2010-12-04 20:53:43,838 DEBUG: User logged in: 130.245.203.167:40796/Sanjeev
+2010-12-04 20:53:52,355 INFO: Error logging in user
+2010-12-04 20:53:52,355 DEBUG: New user connection from 130.245.204.140:49538/
+2010-12-04 20:54:13,724 DEBUG: Removing User: 130.245.204.140:49538/
+2010-12-04 20:54:43,910 DEBUG: Client disconnected: 130.245.203.167:40796/Sanjeev
+2010-12-04 20:54:43,911 DEBUG: Removing User: 130.245.203.167:40796/Sanjeev
+2010-12-04 20:54:46,838 DEBUG: New user connection from 130.245.203.167:53173/
+2010-12-04 20:54:48,051 DEBUG: User logged in: 130.245.203.167:53173/Sanjeev
+2010-12-04 20:55:00,364 INFO: Error logging in user
+2010-12-04 20:56:31,703 DEBUG: New user connection from 130.245.204.140:49560/
+2010-12-04 20:56:33,069 DEBUG: User logged in: 130.245.204.140:49560/nkb
+2010-12-04 20:56:38,917 INFO: Error logging in user
+2010-12-04 20:57:04,325 DEBUG: Client disconnected: 130.245.204.140:49560/nkb
+2010-12-04 20:57:04,325 DEBUG: Removing User: 130.245.204.140:49560/nkb
+2010-12-04 20:57:09,980 DEBUG: New user connection from 130.245.204.140:49562/
+2010-12-04 20:57:13,706 DEBUG: Removing User: 130.245.204.140:49562/nkb
+2010-12-04 20:57:13,706 INFO: Error logging in user
+2010-12-04 20:59:15,694 DEBUG: New user connection from 130.245.204.140:49564/
+2010-12-04 20:59:18,157 DEBUG: User logged in: 130.245.204.140:49564/nkb
+2010-12-04 20:59:34,970 INFO: Error logging in user
+2010-12-04 21:00:40,704 DEBUG: Loaded 0 accounts
+2010-12-04 21:00:40,707 DEBUG: Loaded 0 user commands
+2010-12-04 21:00:40,707 DEBUG: Loaded 0 bots
+2010-12-04 21:00:40,709 INFO: Starting main loop
+2010-12-04 21:00:49,118 DEBUG: New user connection from 130.245.204.140:49568/
+2010-12-04 21:00:53,986 DEBUG: User logged in: 130.245.204.140:49568/nkb
+2010-12-04 21:01:16,637 ERROR: Error processing command from 130.245.204.140:49568/nkb: '$MyINFO $ALL nkb <++ V:0.698,M:A,H:1/0/0,S:1>$ $0.005\x01$nkb@gmail.com$0$'
+Traceback (most recent call last):
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 938, in processcommands
+    self.processcommand(user, command)
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 904, in processcommand
+    getattr(self, 'got%s' % function)(user, *checkedargs)
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 1538, in gotMyINFO
+    self.loginuser(user)
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 813, in loginuser
+    self.giveNickList(user)
+  File "C:\Stuffs\My Documents\My Dropbox\Workspace\pyDCHub\DCHub.py", line 1983, in giveNickList
+    friendList.append(dcUser)
+NameError: global name 'friendList' is not defined
+2010-12-04 21:01:16,640 DEBUG: New user connection from 130.245.203.167:49366/
+2010-12-04 21:01:17,753 DEBUG: User logged in: 130.245.203.167:49366/Sanjeev
+2010-12-04 21:02:41,944 DEBUG: Loaded 0 accounts
+2010-12-04 21:02:41,946 DEBUG: Loaded 0 user commands
+2010-12-04 21:02:41,946 DEBUG: Loaded 0 bots
+2010-12-04 21:02:41,947 INFO: Starting main loop
+2010-12-04 21:02:56,839 DEBUG: New user connection from 130.245.204.140:49572/
+2010-12-04 21:02:59,694 DEBUG: User logged in: 130.245.204.140:49572/nkb
+2010-12-04 21:03:04,788 INFO: Error logging in user
+2010-12-04 21:03:23,359 DEBUG: New user connection from 130.245.203.167:34970/
+2010-12-04 21:03:24,502 DEBUG: User logged in: 130.245.203.167:34970/Sanjeev
+2010-12-04 21:03:49,099 INFO: Error logging in user
+2010-12-04 21:08:32,010 DEBUG: Loaded 0 accounts
+2010-12-04 21:08:32,012 DEBUG: Loaded 0 user commands
+2010-12-04 21:08:32,013 DEBUG: Loaded 0 bots
+2010-12-04 21:08:32,013 INFO: Starting main loop
+2010-12-04 21:08:36,644 DEBUG: New user connection from 130.245.203.167:46927/
+2010-12-04 21:08:47,811 DEBUG: User logged in: 130.245.203.167:46927/Sanjeev
+2010-12-04 21:09:05,219 DEBUG: New user connection from 130.245.204.140:49582/
+2010-12-04 21:09:08,440 DEBUG: User logged in: 130.245.204.140:49582/nkb
+2010-12-04 21:10:37,342 DEBUG: Loaded 0 accounts
+2010-12-04 21:10:37,345 DEBUG: Loaded 0 user commands
+2010-12-04 21:10:37,345 DEBUG: Loaded 0 bots
+2010-12-04 21:10:37,346 INFO: Starting main loop
+2010-12-04 21:10:46,858 DEBUG: New user connection from 130.245.204.140:49590/
+2010-12-04 21:11:09,875 DEBUG: New user connection from 130.245.203.167:55404/
+2010-12-04 21:11:10,924 DEBUG: User logged in: 130.245.203.167:55404/Sanjeev
+2010-12-04 21:11:33,086 DEBUG: User logged in: 130.245.204.140:49590/nkb
+2010-12-04 21:12:46,601 DEBUG: Loaded 0 accounts
+2010-12-04 21:12:46,605 DEBUG: Loaded 0 user commands
+2010-12-04 21:12:46,605 DEBUG: Loaded 0 bots
+2010-12-04 21:12:46,607 INFO: Starting main loop
+2010-12-04 21:12:55,460 DEBUG: New user connection from 130.245.203.167:42268/
+2010-12-04 21:12:57,257 DEBUG: User logged in: 130.245.203.167:42268/Sanjeev
+2010-12-04 21:12:59,839 DEBUG: New user connection from 130.245.204.140:49598/
+2010-12-04 21:13:01,362 DEBUG: User logged in: 130.245.204.140:49598/nkb
+2010-12-04 21:13:33,115 DEBUG: New user connection from 129.49.235.138:2845/
+2010-12-04 21:13:35,344 DEBUG: User logged in: 129.49.235.138:2845/Naresh
+2010-12-04 21:16:37,526 DEBUG: Loaded 0 accounts
+2010-12-04 21:16:37,526 DEBUG: Loaded 0 user commands
+2010-12-04 21:16:37,526 DEBUG: Loaded 0 bots
+2010-12-04 21:16:37,529 INFO: Starting main loop
+2010-12-04 21:16:45,609 DEBUG: New user connection from 130.245.203.167:59740/
+2010-12-04 21:16:47,582 DEBUG: User logged in: 130.245.203.167:59740/Sanjeev
+2010-12-04 21:18:04,821 DEBUG: Loaded 0 accounts
+2010-12-04 21:18:04,822 DEBUG: Loaded 0 user commands
+2010-12-04 21:18:04,822 DEBUG: Loaded 0 bots
+2010-12-04 21:18:04,825 INFO: Starting main loop
+2010-12-04 21:18:12,982 DEBUG: New user connection from 130.245.204.140:49604/
+2010-12-04 21:18:13,095 DEBUG: New user connection from 130.245.203.167:53863/
+2010-12-04 21:18:25,456 DEBUG: User logged in: 130.245.203.167:53863/Sanjeev
+2010-12-04 21:18:30,496 DEBUG: User logged in: 130.245.204.140:49604/nkb
+2010-12-04 21:19:49,595 DEBUG: Removing connection due to error in receiving data: 130.245.203.167:53863/Sanjeev
+2010-12-04 21:19:49,596 DEBUG: Removing User: 130.245.203.167:53863/Sanjeev
+2010-12-04 21:19:49,596 DEBUG: Error checking args for function checkConnectToMe, user 130.245.204.140:49604/nkb, args 'Sanjeev 10.0.2.15:39986'
+2010-12-04 21:22:44,813 DEBUG: Loaded 0 accounts
+2010-12-04 21:22:44,815 DEBUG: Loaded 0 user commands
+2010-12-04 21:22:44,815 DEBUG: Loaded 0 bots
+2010-12-04 21:22:44,818 INFO: Starting main loop
+2010-12-04 21:22:49,594 DEBUG: New user connection from 130.245.204.140:49616/
+2010-12-04 21:22:52,533 DEBUG: User logged in: 130.245.204.140:49616/nkb
+2010-12-04 21:22:55,128 DEBUG: New user connection from 130.245.203.167:34227/
+2010-12-04 21:22:58,190 DEBUG: User logged in: 130.245.203.167:34227/Sanjeev
+2010-12-04 21:23:26,538 DEBUG: New user connection from 130.245.203.167:56586/
+2010-12-04 21:23:26,538 DEBUG: Client disconnected: 130.245.203.167:34227/Sanjeev
+2010-12-04 21:23:26,538 DEBUG: Removing User: 130.245.203.167:34227/Sanjeev
+2010-12-04 21:28:37,411 DEBUG: Loaded 0 accounts
+2010-12-04 21:28:37,413 DEBUG: Loaded 0 user commands
+2010-12-04 21:28:37,414 DEBUG: Loaded 0 bots
+2010-12-04 21:28:37,414 INFO: Starting main loop
+2010-12-04 21:28:43,135 DEBUG: New user connection from 130.245.203.167:40674/
+2010-12-04 21:28:44,473 DEBUG: User logged in: 130.245.203.167:40674/Sanjeev
+2010-12-04 21:28:50,459 DEBUG: New user connection from 130.245.204.140:49652/
+2010-12-04 21:28:51,265 DEBUG: User logged in: 130.245.204.140:49652/nkb
+2010-12-04 21:30:21,226 DEBUG: New user connection from 129.49.235.138:2960/
+2010-12-04 21:30:21,938 DEBUG: User logged in: 129.49.235.138:2960/Naresh

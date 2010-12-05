@@ -310,7 +310,8 @@ class DCHub(object):
     def adduser(self, user):
         '''Add a new user (socket connection) to the hub'''
         self.hubfullcheck(user)
-        self.joinfloodcheck(user, 'ip')
+        '''SSP:'''
+        #self.joinfloodcheck(user, 'ip')
         # Python's select seems broken, even if it returns that a given socket
         # is writeable, it can block on writing to it, so you need to add a 
         # timeout or the hub may occassionally freeze for minutes at a time
@@ -796,7 +797,8 @@ class DCHub(object):
         join flood limits before adding them to the hub.
         '''
         self.hubfullcheck(user)
-        self.joinfloodcheck(user)
+        '''SSP:'''
+        #self.joinfloodcheck(user)
         curtime = time.time()
         user.validcommands = self.validusercommands.copy()
         self.users[user.nick] = user
@@ -1901,6 +1903,7 @@ class DCHub(object):
         if newuser:
             ''' SSP: '''
             for dcUser in self.users.iterkeys():
+                print 'giveHello'
                 if user.fbConnIface.isFriend(self.users[ dcUser ].fbUid) is True and 'NoHello' not in self.users[ dcUser ].supports:
                     self.users[ dcUser ].sendmessage(message)
             #for client in self.users.itervalues():
@@ -1925,7 +1928,7 @@ class DCHub(object):
     ''' SSP: '''    
     def giveFBLoginURL(self, user):
         '''Give the user the Facebook Login URL'''
-        user.sendmessage('<Login URL> Please login at %s to access this hub.|' % self.FBLoginURL)
+        user.sendmessage('<Login URL> If not logged in, please login at %s to access this hub.|' % self.FBLoginURL)
         user.sendmessage('$FBLogin %s|' % self.FBLoginURL)
         user.validcommands = set(['FBAuthRand'])
         
@@ -1935,6 +1938,7 @@ class DCHub(object):
         user.sendmessage('<Hub-Security> Access Denied.|')
         user.sendmessage('$FBAuthError|')
         user.validcommands  = set(['FBLogin FBAuthRand'])
+        self.removeuser(user)
         
     def giveHubName(self, user=None):
         '''Give the hub name to a new connection or to all logged on users
@@ -1958,6 +1962,7 @@ class DCHub(object):
             message = []
             ''' SSP: '''
             for dcUser in self.users.iterkeys():
+                print 'giveMyInfo 1'
                 if client.fbConnIface.isFriend(self.users[ dcUser ].fbUid) is True:
                     message.append(dcUser.myinfo)
                 
@@ -1968,14 +1973,18 @@ class DCHub(object):
         myinfo = client.myinfo
         ''' SSP: '''
         for dcUser in self.users.iterkeys():
+            print 'giveMyInfo 2'
             if client.fbConnIface.isFriend(self.users[ dcUser ].fbUid) is True:
                 self.users[ dcUser ].sendmessage(myinfo)
             
     def giveNickList(self, user):
         '''Give the nick list to the user'''
         ''' SSP: '''
+        friendList  = []
         for dcUser in self.users.iterkeys():
+            print 'giveNickList'
             if user.fbConnIface.isFriend(self.users[ dcUser ].fbUid) is True or dcUser == user.nick:
+                print 'Friend: %s'%dcUser
                 friendList.append(dcUser)
                 
         user.sendmessage('$NickList %s$$|' % '$$'.join(friendList))

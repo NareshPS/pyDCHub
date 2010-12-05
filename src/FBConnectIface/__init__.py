@@ -18,18 +18,19 @@ class FBConnectIface:
         return self.friendsList
     
     def isFriend(self, uid):
-        friend  = False
+        friendRet   = False
         try:
             for friend in self.fetchFriends():
                 if friend[ 'id' ] == uid:
-                    print 'Found'
-                    friend  = True
+                    friendRet   = True
         except ValueError:
-            friend  = False
+            friendRet   = False
         except:
-            friend  = False
+            friendRet   = False
             
-        return friend
+        print friendRet
+            
+        return friendRet
         
     def isValidToken(self):
         if self.fbconn.getAccessToken(self.randomToken) is not None:

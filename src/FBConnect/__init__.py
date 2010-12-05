@@ -5,6 +5,9 @@ import traceback
 
 class FBConnect:
     
+    fbUser          = None
+    fbAccessToken   = None
+    
     def __init__(self, db_filename):
         self.db_filename    = db_filename
         self.db_conn        = None
@@ -18,31 +21,33 @@ class FBConnect:
                 traceback.print_exception(sys.exc_info()[ 0 ], sys.exc_info()[ 1 ], sys.exc_info()[ 2 ], limit=4)
                 
     def getAccessToken(self, randomToken):
-        accessToken = None
-        try:
-            if self.db_conn is None:
-                self.dbConnect()
-            
-            userTuple   = self.db_conn.FBDBQuery(randomToken)
-            
-            if userTuple is not None:
-                accessToken = userTuple[ 2 ]
-        except:
-            print 'Exception in function: '
-            traceback.print_exception(sys.exc_info()[ 0 ], sys.exc_info()[ 1 ], sys.exc_info()[ 2 ], limit=4)
-            
-        return accessToken
+        
+        if self.fbAccessToken is None:
+            try:
+                if self.db_conn is None:
+                    self.dbConnect()
+                
+                userTuple   = self.db_conn.FBDBQuery(randomToken)
+                
+                if userTuple is not None:
+                    self.fbAccessToken  = userTuple[ 2 ]
+            except:
+                print 'Exception in function: '
+                traceback.print_exception(sys.exc_info()[ 0 ], sys.exc_info()[ 1 ], sys.exc_info()[ 2 ], limit=4)
+                
+        return self.fbAccessToken
     
     def getFBUser(self, randomToken):
-        user    = None
-        try:
-            accessToken = self.getAccessToken(randomToken)
-            user        = FBUser.FBUser(accessToken)
-        except:
-            print 'Exception in function: '
-            traceback.print_exception(sys.exc_info()[ 0 ], sys.exc_info()[ 1 ], sys.exc_info()[ 2 ], limit=4)
-            
-        return user
+        
+        if self.fbUser is None:
+            try:
+                accessToken = self.getAccessToken(randomToken)
+                self.fbUser = FBUser.FBUser(accessToken)
+            except:
+                print 'Exception in function: '
+                traceback.print_exception(sys.exc_info()[ 0 ], sys.exc_info()[ 1 ], sys.exc_info()[ 2 ], limit=4)
+                
+        return self.fbUser
         
     def fetchFriends(self, randomToken):
             return self.getFBUser(randomToken).fetchFriends()
