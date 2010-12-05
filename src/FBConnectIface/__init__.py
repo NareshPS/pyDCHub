@@ -4,6 +4,8 @@ import sys, traceback
 class FBConnectIface:
     friendsList     = None
     uid             = None
+    fbconn          = None
+    
     def __init__(self, randomToken):
         try:
             self.db_filename    = 'C:/Stuffs/www/db.sqlite'

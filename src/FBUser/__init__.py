@@ -11,6 +11,7 @@ class FBUser:
     fbUfriends      = 'friends'
     fbUId           = 'id'
     fbUemail        = 'email'
+    fbRetry         = 3
     
     def __init__(self, access_token):
         """Initializes the class"""
@@ -40,12 +41,17 @@ class FBUser:
         return  self.fbUser['email']
     
     def fetchUid(self):
-        try:
-            if self.fbUser is None:
-                self.fbUser    = self.fbUgraph.get_object(self.fbUself)
-        except:
-            print 'Error fetching UID'
-            traceback.print_exception(sys.exc_info()[ 0 ], sys.exc_info()[ 1 ], sys.exc_info()[ 2 ], limit=4)
-            return None
-        
+        if self.fbUser is None:
+            numRetry    = self.fbRetry
+            for retry in range(numRetry):
+                try:
+                    self.fbUser    = self.fbUgraph.get_object(self.fbUself)
+                except IOError:
+                    if retry == self.fbRetry - 1:
+                        traceback.print_exception(sys.exc_info()[ 0 ], sys.exc_info()[ 1 ], sys.exc_info()[ 2 ], limit=6)
+                except:
+                    print 'Error fetching UID'
+                    traceback.print_exception(sys.exc_info()[ 0 ], sys.exc_info()[ 1 ], sys.exc_info()[ 2 ], limit=4)
+                    return None
+            
         return self.fbUser['id']

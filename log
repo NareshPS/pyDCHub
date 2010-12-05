@@ -1137,3 +1137,37 @@ NameError: global name 'friendList' is not defined
 2010-12-04 21:28:51,265 DEBUG: User logged in: 130.245.204.140:49652/nkb
 2010-12-04 21:30:21,226 DEBUG: New user connection from 129.49.235.138:2960/
 2010-12-04 21:30:21,938 DEBUG: User logged in: 129.49.235.138:2960/Naresh
+2010-12-04 21:33:54,648 DEBUG: Client disconnected: 130.245.203.167:40674/Sanjeev
+2010-12-04 21:33:54,648 DEBUG: Removing User: 130.245.203.167:40674/Sanjeev
+2010-12-04 21:37:04,346 DEBUG: Client disconnected: 129.49.235.138:2960/Naresh
+2010-12-04 21:37:04,346 DEBUG: Removing User: 129.49.235.138:2960/Naresh
+2010-12-04 21:38:33,631 DEBUG: New user connection from 130.245.203.167:52963/
+2010-12-04 21:38:37,230 DEBUG: User logged in: 130.245.203.167:52963/Sanjeev
+2010-12-04 21:39:26,788 DEBUG: New user connection from 129.49.235.138:3021/
+2010-12-04 21:39:47,941 DEBUG: Removing User: 129.49.235.138:3021/
+2010-12-04 21:45:49,164 DEBUG: Loaded 0 accounts
+2010-12-04 21:45:49,164 DEBUG: Loaded 0 user commands
+2010-12-04 21:45:49,165 DEBUG: Loaded 0 bots
+2010-12-04 21:45:49,167 INFO: Starting main loop
+2010-12-04 21:46:01,414 DEBUG: New user connection from 130.245.203.167:38711/
+2010-12-04 21:46:02,829 DEBUG: User logged in: 130.245.203.167:38711/Sanjeev
+2010-12-04 21:46:06,551 DEBUG: New user connection from 129.49.235.138:3073/
+2010-12-04 21:46:07,263 DEBUG: User logged in: 129.49.235.138:3073/Naresh
+2010-12-04 21:46:53,697 DEBUG: New user connection from 130.245.204.140:49686/
+2010-12-04 21:46:58,543 DEBUG: User logged in: 130.245.204.140:49686/nkb
+2010-12-04 21:51:39,213 DEBUG: Client disconnected: 129.49.235.138:3073/Naresh
+2010-12-04 21:51:39,213 DEBUG: Removing User: 129.49.235.138:3073/Naresh
+2010-12-04 21:51:41,463 DEBUG: New user connection from 129.49.235.138:3088/
+2010-12-04 21:51:53,588 DEBUG: Removing User: 129.49.235.138:3088/
+2010-12-04 21:53:42,384 DEBUG: New user connection from 129.49.235.138:3094/
+2010-12-04 21:53:43,180 DEBUG: User logged in: 129.49.235.138:3094/Naresh
+2010-12-04 21:58:03,907 DEBUG: Client disconnected: 130.245.203.167:38711/Sanjeev
+2010-12-04 21:58:03,907 DEBUG: Removing User: 130.245.203.167:38711/Sanjeev
+2010-12-04 22:04:02,174 DEBUG: Loaded 0 accounts
+2010-12-04 22:04:02,176 DEBUG: Loaded 0 user commands
+2010-12-04 22:04:02,176 DEBUG: Loaded 0 bots
+2010-12-04 22:04:02,177 INFO: Starting main loop
+2010-12-04 23:10:38,535 DEBUG: Loaded 0 accounts
+2010-12-04 23:10:38,536 DEBUG: Loaded 0 user commands
+2010-12-04 23:10:38,536 DEBUG: Loaded 0 bots
+2010-12-04 23:10:38,539 INFO: Starting main loop

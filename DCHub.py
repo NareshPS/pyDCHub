@@ -1903,7 +1903,6 @@ class DCHub(object):
         if newuser:
             ''' SSP: '''
             for dcUser in self.users.iterkeys():
-                print 'giveHello'
                 if user.fbConnIface.isFriend(self.users[ dcUser ].fbUid) is True and 'NoHello' not in self.users[ dcUser ].supports:
                     self.users[ dcUser ].sendmessage(message)
             #for client in self.users.itervalues():
@@ -1962,7 +1961,6 @@ class DCHub(object):
             message = []
             ''' SSP: '''
             for dcUser in self.users.iterkeys():
-                print 'giveMyInfo 1'
                 if client.fbConnIface.isFriend(self.users[ dcUser ].fbUid) is True:
                     message.append(dcUser.myinfo)
                 
@@ -1973,7 +1971,6 @@ class DCHub(object):
         myinfo = client.myinfo
         ''' SSP: '''
         for dcUser in self.users.iterkeys():
-            print 'giveMyInfo 2'
             if client.fbConnIface.isFriend(self.users[ dcUser ].fbUid) is True:
                 self.users[ dcUser ].sendmessage(myinfo)
             
@@ -1982,9 +1979,7 @@ class DCHub(object):
         ''' SSP: '''
         friendList  = []
         for dcUser in self.users.iterkeys():
-            print 'giveNickList'
             if user.fbConnIface.isFriend(self.users[ dcUser ].fbUid) is True or dcUser == user.nick:
-                print 'Friend: %s'%dcUser
                 friendList.append(dcUser)
                 
         user.sendmessage('$NickList %s$$|' % '$$'.join(friendList))
